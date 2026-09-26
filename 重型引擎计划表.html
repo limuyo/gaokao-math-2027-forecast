@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2027 压轴题预测 · 重型引擎计划表</title>
+<style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#1d1d1f;--muted:#6e6e73;--line:rgba(0,0,0,.09);--brand:#0a5ad6;--ok:#0a7a3d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:15.5px/1.8 -apple-system,"SF Pro SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;color:var(--ink);background:var(--bg);padding:48px 20px 80px}
+.wrap{max-width:880px;margin:0 auto}
+h1{font-size:clamp(24px,4vw,34px);letter-spacing:-.02em;line-height:1.25}
+.sub{color:var(--muted);margin:8px 0 28px;font-size:14px}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+.meta span{font-size:13px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+.stage{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 24px;margin-bottom:16px;box-shadow:0 1px 2px rgba(16,32,64,.04),0 8px 24px rgba(16,32,64,.05)}
+.stage h2{font-size:17px;display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.stage h2 .no{width:30px;height:30px;border-radius:9px;background:var(--brand);color:#fff;font-size:14px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 30px}
+.stage h2 .done-badge{font-size:12px;color:var(--ok);background:#e6f6ec;border-radius:999px;padding:2px 10px;margin-left:auto}
+.task{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px dashed var(--line)}
+.task:last-child{border-bottom:none}
+.task input{margin-top:6px;width:16px;height:16px;accent-color:var(--brand);flex:0 0 16px;cursor:pointer}
+.task label{cursor:pointer}
+.task label small{display:block;color:var(--muted);font-size:12.5px}
+.cost{font-size:11.5px;font-weight:700;border-radius:6px;padding:2px 8px;margin-left:8px;vertical-align:1px}
+.cost.hi{background:#fdecec;color:#c0392b}.cost.mid{background:#fdf6e3;color:#8a6d1a}.cost.lo{background:#e6f6ec;color:#0a7a3d}
+.progress{position:sticky;top:12px;z-index:5;background:rgba(245,246,248,.85);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:14px;padding:12px 18px;margin-bottom:24px;display:flex;align-items:center;gap:14px}
+.progress .bar{flex:1;height:10px;border-radius:5px;background:rgba(0,0,0,.06);overflow:hidden}
+.progress .fill{height:100%;width:0;background:linear-gradient(90deg,var(--brand),#3d86ff);border-radius:5px;transition:width .4s cubic-bezier(.22,1,.36,1)}
+.progress b{font-size:14px;color:var(--brand);font-variant-numeric:tabular-nums}
+h3.sec{margin:34px 0 12px;font-size:16px}
+.ac{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;font-size:13.5px;color:var(--ink-2)}
+.ac li{margin:4px 0 4px 18px}
+.warn{background:#fdf6e3;border:1px solid #f0e2b6;border-radius:12px;padding:14px 18px;font-size:13.5px;color:#6d5a17;line-height:1.9}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>2027 压轴题预测 · 重型引擎计划表</h1>
+  <p class="sub">23 年全语料 × 多模型竞争 × 贝叶斯融合 × 答案选项指纹 ｜ 勾选进度自动保存在本机</p>
+  <div class="meta">
+    <span>创建：2026-09-13</span><span>核心语料：2004–2026 全国Ⅰ卷文理选择压轴</span><span>辅助语料：新高考Ⅱ卷 / 全国甲乙卷</span><span>目标：2027 单选第 8 题 + 多选第 11 题</span>
+  </div>
+  <div class="progress"><b id="pct">0%</b><div class="bar"><div class="fill" id="fill"></div></div><span id="cnt" style="font-size:13px;color:var(--muted)">0 / 16</span></div>
+
+  <div class="stage"><h2><span class="no">0</span>计划落盘<button class="done-badge" hidden>已完成</button></h2>
+    <div class="task"><input type="checkbox" id="t0"><label for="t0">生成可勾选计划表（本页）<small>产出：重型引擎计划表.html</small><span class="cost lo">低</span></label></div>
+  </div>
+
+  <div class="stage"><h2><span class="no">1</span>数据工程<button class="done-badge" hidden>已完成</button></h2>
+    <div class="task"><input type="checkbox" id="t1"><label for="t1">检索 2004–2016 全国Ⅰ卷文理第 12 题，每题双来源或数学推演验证<small>无法核实的年份如实标记"来源缺失"，不编造</small><span class="cost hi">最高</span></label></div>
+    <div class="task"><input type="checkbox" id="t2"><label for="t2">辅助语料：新高考Ⅱ卷 / 全国甲乙卷压轴题（低权重先验）<small>尽力检索，未完成项如实标记</small><span class="cost mid">中</span></label></div>
+    <div class="task"><input type="checkbox" id="t3"><label for="t3">三级标注：L1 考点 / L2 子考点 / L3 方法 + 情境载体 + 设问形式 + 计算量<small>两遍标注 + 复核仲裁，争议题打标</small><span class="cost hi">高</span></label></div>
+    <div class="task"><input type="checkbox" id="t4"><label for="t4">答案字母库：每题答案字母/组合，供"选项指纹模型"使用<small>含单选字母分布、多选组合类型、错项位置倾向</small><span class="cost lo">低</span></label></div>
+    <div class="task"><input type="checkbox" id="t5"><label for="t5">产出 core_questions.json 结构化语料<small>网页与引擎共用同一数据源</small><span class="cost lo">低</span></label></div>
+  </div>
+
+  <div class="stage"><h2><span class="no">2</span>建模与回测<button class="done-badge" hidden>已完成</button></h2>
+    <div class="task"><input type="checkbox" id="t6"><label for="t6">模型池：频率衰减 / 1–2 阶马尔可夫 / 生存分析 hazard / 文本相似度风格指纹 / 命题人分段 / 辅助卷先验 / 选项指纹<small>纯 Python 标准库，网格可穷举</small><span class="cost mid">中</span></label></div>
+    <div class="task"><input type="checkbox" id="t7"><label for="t7">滚动回测（expanding window）：Brier / log-loss / Top1–3 逐年成绩单<small>目标年训练不足 2 年不参与，如实报告</small><span class="cost mid">中</span></label></div>
+    <div class="task"><input type="checkbox" id="t8"><label for="t8">网格穷举调参 + 10000 次 bootstrap 95% 置信区间<small>以回测 log-loss 为主、Top1 为辅，防过拟合</small><span class="cost hi">高</span></label></div>
+    <div class="task"><input type="checkbox" id="t9"><label for="t9">贝叶斯模型平均（BMA）融合 + 校准检验，产出 engine_output.json<small>含 2027 最终分布、置信区间、答案组合预测</small><span class="cost mid">中</span></label></div>
+  </div>
+
+  <div class="stage"><h2><span class="no">3</span>网页升级<button class="done-badge" hidden>已完成</button></h2>
+    <div class="task"><input type="checkbox" id="t10"><label for="t10">实验室板块重构：内嵌引擎结果（带置信区间）、模型成绩单、逐年回测表<small>互动沙盒（滑杆/情报）保留，与引擎基线并存</small><span class="cost mid">中</span></label></div>
+    <div class="task"><input type="checkbox" id="t11"><label for="t11">新增"答案选项分析"板块：字母分布 / 组合类型 / 错项倾向 / 2027 答案组合预测<small>回应"去年 AC、今年 AB，明年选什么"的需求</small><span class="cost mid">中</span></label></div>
+    <div class="task"><input type="checkbox" id="t12"><label for="t12">全语料考点时间带与轮换周期可视化（20+ 年）<small>单文件内嵌数据，无外链</small><span class="cost lo">低</span></label></div>
+    <div class="task"><input type="checkbox" id="t13"><label for="t13">模拟押题按引擎最终 Top3 考点重新校准命制依据<small>答案已逐题推演验证的保留</small><span class="cost lo">低</span></label></div>
+  </div>
+
+  <div class="stage"><h2><span class="no">4</span>验收交付<button class="done-badge" hidden>已完成</button></h2>
+    <div class="task"><input type="checkbox" id="t14"><label for="t14">浏览器全功能回归：回测数值抽查、联动、归一化、手机端、截图<small>桌面 + 390px 移动端双核查</small><span class="cost mid">中</span></label></div>
+    <div class="task"><input type="checkbox" id="t15"><label for="t15">交付清单 + 完成态计划表<span class="cost lo">低</span></label></div>
+  </div>
+
+  <h3 class="sec">验收标准</h3>
+  <ul class="ac">
+    <li>2017–2026 核心语料覆盖 100%；2004–2016 检索命中率如实报告，缺题标"来源缺失"；</li>
+    <li>每道新增题 ≥2 独立来源，或经数学推演验证；</li>
+    <li>回测成绩单逐年可查；融合模型 Top3 命中率目标 ≥80%，达不到则如实展示并分析；</li>
+    <li>所有最终概率附 bootstrap 95% 置信区间；</li>
+    <li>网页保持单文件、零外部依赖、双击可开、手机端无溢出。</li>
+  </ul>
+
+  <h3 class="sec">诚实预期</h3>
+  <div class="warn">
+    本问题每年仅 2~3 个数据点，<b>瓶颈是数据量而非算力</b>。单选 Top1 命中的现实上限约 50–60%，Top3 约 85–90%；算力用于检索交叉验证、标注仲裁、网格穷举与万次 bootstrap，把不确定性挤干并量化，而不是承诺"精准押中原题"。答案字母分析同理：它是弱先验（答案由数学内容决定），只能给出"B 出现率高、二/三选组合为主"这类结构性倾向，不构成赌博式押字母的依据。
+  </div>
+</div>
+<script>
+const boxes=[...document.querySelectorAll('.task input')];
+function load(){let s=null;try{s=JSON.parse(localStorage.getItem('plan2027')||'null');}catch(e){}if(s){boxes.forEach(b=>b.checked=!!s[b.id]);}else{boxes.forEach(b=>b.checked=true);}}
+function save(){const s={};boxes.forEach(b=>s[b.id]=b.checked);localStorage.setItem('plan2027',JSON.stringify(s));}
+function render(){
+  const n=boxes.filter(b=>b.checked).length;
+  document.getElementById('pct').textContent=Math.round(n/boxes.length*100)+'%';
+  document.getElementById('fill').style.width=(n/boxes.length*100)+'%';
+  document.getElementById('cnt').textContent=n+' / '+boxes.length;
+  document.querySelectorAll('.stage').forEach(st=>{
+    const ts=[...st.querySelectorAll('input')];
+    st.querySelector('.done-badge').hidden=!ts.every(t=>t.checked);
+  });
+}
+boxes.forEach(b=>b.addEventListener('change',()=>{save();render();}));
+load();render();
+</script>
+</body>
+</html>

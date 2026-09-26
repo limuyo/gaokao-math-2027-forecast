@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2027 广东高考数学 · 选择压轴题十年洞察与预测</title>
+<style>
+:root{
+  --bg:#f5f6f8;
+  --card:#ffffff;
+  --ink:#1d1d1f;
+  --ink-2:#48484d;
+  --muted:#6e6e73;
+  --line:rgba(0,0,0,.09);
+  --brand:#0a5ad6;
+  --brand-deep:#0b2a5e;
+  --gold:#c9a227;
+  --radius:18px;
+  --shadow:0 1px 2px rgba(16,32,64,.05), 0 8px 28px rgba(16,32,64,.07);
+  --c-lj:#2563eb; --c-hs:#7c3aed; --c-jx:#059669; --c-gl:#d97706; --c-sj:#dc2626; --c-sl:#0891b2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font:16px/1.75 -apple-system,BlinkMacSystemFont,"SF Pro SC","PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  color:var(--ink);background:var(--bg);
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+::selection{background:rgba(10,90,214,.18)}
+button, a{-webkit-tap-highlight-color:transparent}
+:focus-visible{outline:2.5px solid var(--brand);outline-offset:2px;border-radius:10px}
+h1,h2,h3{text-wrap:balance}
+
+/* ---------- 导航：半透明毛玻璃 ---------- */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;height:56px;
+  background:rgba(245,246,248,.72);
+  -webkit-backdrop-filter:blur(20px) saturate(180%);backdrop-filter:blur(20px) saturate(180%);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s ease, background .3s ease;
+}
+.nav.scrolled{border-bottom-color:var(--line);background:rgba(245,246,248,.85)}
+.nav-inner{max-width:1100px;margin:0 auto;height:100%;padding:0 20px;display:flex;align-items:center;gap:26px}
+.nav-logo{font-weight:700;font-size:15px;letter-spacing:.01em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.nav-logo b{color:var(--brand)}
+.nav-links{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{
+  font-size:13.5px;color:var(--ink-2);text-decoration:none;padding:6px 12px;border-radius:999px;
+  white-space:nowrap;transition:background .2s ease,color .2s ease;
+}
+.nav-links a:hover{background:rgba(0,0,0,.05)}
+.nav-links a.on{background:rgba(10,90,214,.10);color:var(--brand);font-weight:600}
+.nav-cta{
+  font-size:13.5px;font-weight:600;color:#fff;background:var(--brand);text-decoration:none;
+  padding:7px 15px;border-radius:999px;white-space:nowrap;
+  transition:transform .1s ease-out, background .2s ease;
+}
+.nav-cta:active{transform:scale(.96)}
+@media (max-width:720px){ .nav-cta{display:none} }
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  background:linear-gradient(160deg,#0a1834 0%,#0e2a5c 52%,#123a7d 100%);
+  padding:150px 20px 88px;
+}
+.hero-ghost{
+  position:absolute;inset:0;pointer-events:none;user-select:none;
+  font-size:min(46vw,560px);font-weight:800;line-height:.86;letter-spacing:-.05em;
+  color:rgba(255,255,255,.045);white-space:nowrap;
+  right:-4%;bottom:-8%;
+}
+.hero-inner{position:relative;max-width:1100px;margin:0 auto}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:600;letter-spacing:.12em;color:#9fc0ff;
+  border:1px solid rgba(159,192,255,.35);border-radius:999px;padding:6px 14px;margin-bottom:22px;
+}
+.hero h1{
+  font-size:clamp(34px,5.6vw,58px);font-weight:800;line-height:1.1;letter-spacing:-.022em;
+  max-width:20em;
+}
+.hero h1 em{font-style:normal;color:#ffd76a}
+.hero-sub{margin-top:18px;max-width:640px;color:rgba(230,238,252,.82);font-size:16.5px}
+.hero-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.chip{
+  font-size:13px;color:#dce7ff;background:rgba(255,255,255,.10);
+  border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:6px 14px;
+}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;border-radius:14px;text-decoration:none;
+  font-size:15px;font-weight:600;padding:12px 22px;cursor:pointer;border:none;
+  transition:transform .1s ease-out, background .2s ease, box-shadow .2s ease;
+}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:#2e7bff;color:#fff;box-shadow:0 6px 20px rgba(46,123,255,.35)}
+.btn-primary:hover{background:#3d86ff}
+.btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.22)}
+.btn-ghost:hover{background:rgba(255,255,255,.2)}
+.hero-note{margin-top:26px;font-size:12.5px;color:rgba(220,230,250,.55);max-width:720px}
+
+/* ---------- 布局 ---------- */
+main{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:76px 0 8px;scroll-margin-top:70px}
+.sec-head{margin-bottom:30px}
+.sec-tag{
+  font-size:12.5px;font-weight:700;letter-spacing:.18em;color:var(--brand);
+  display:flex;align-items:center;gap:10px;margin-bottom:10px;
+}
+.sec-tag::after{content:"";flex:0 0 44px;height:1px;background:linear-gradient(90deg,var(--brand),transparent)}
+.sec-head h2{font-size:clamp(24px,3.2vw,33px);font-weight:750;letter-spacing:-.018em;line-height:1.25}
+.sec-head p{margin-top:8px;color:var(--muted);font-size:15px;max-width:760px}
+
+/* ---------- 年份选择器 ---------- */
+.year-tabs{display:flex;gap:8px;overflow-x:auto;padding:2px;scrollbar-width:none;margin-bottom:22px}
+.year-tabs::-webkit-scrollbar{display:none}
+.ytab{
+  flex:0 0 auto;font-size:14px;font-weight:600;color:var(--ink-2);
+  background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:9px 16px;cursor:pointer;
+  transition:transform .1s ease-out, all .2s ease;
+}
+.ytab:hover{border-color:rgba(10,90,214,.4)}
+.ytab:active{transform:scale(.95)}
+.ytab.on{background:var(--brand-deep);border-color:var(--brand-deep);color:#fff}
+.year-paper{font-size:13px;color:var(--muted);margin:0 2px 16px}
+
+/* ---------- 题卡 ---------- */
+.qcard{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:26px 28px;margin-bottom:20px;
+}
+.q-top{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:14px}
+.q-slot{
+  font-size:12.5px;font-weight:700;color:#fff;border-radius:8px;padding:4px 10px;
+  background:linear-gradient(135deg,#0a5ad6,#3d86ff);
+}
+.q-slot.multi{background:linear-gradient(135deg,#7c3aed,#a855f7)}
+.q-num{font-size:13px;font-weight:600;color:var(--muted)}
+.q-tag{
+  font-size:12px;font-weight:600;border-radius:999px;padding:3px 10px;
+}
+.q-top .q-tag:first-of-type{margin-left:auto}
+.q-stem{font-size:15.5px;line-height:1.9;color:var(--ink)}
+.q-opts{display:grid;gap:8px;margin-top:14px}
+.q-opts.c2{grid-template-columns:1fr 1fr}
+.q-opts.c4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:640px){.q-opts.c2,.q-opts.c4{grid-template-columns:1fr}}
+.q-opt{
+  font-size:14.5px;color:var(--ink-2);background:var(--bg);
+  border:1px solid var(--line);border-radius:10px;padding:9px 13px;line-height:1.6;
+}
+.q-opt b{color:var(--ink);font-weight:700;margin-right:6px}
+.q-note{
+  margin-top:12px;font-size:13px;color:#8a6d1a;background:#fdf6e3;
+  border:1px solid #f0e2b6;border-radius:10px;padding:8px 12px;line-height:1.7;
+}
+.q-actions{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+.q-reveal{
+  font-size:13.5px;font-weight:600;color:var(--brand);background:rgba(10,90,214,.08);
+  border:1px solid rgba(10,90,214,.25);border-radius:10px;padding:8px 16px;cursor:pointer;
+  transition:transform .1s ease-out, background .2s ease;
+}
+.q-reveal:hover{background:rgba(10,90,214,.14)}
+.q-reveal:active{transform:scale(.96)}
+.q-answer{display:grid;grid-template-rows:0fr;transition:grid-template-rows .38s cubic-bezier(.32,.72,.28,1)}
+.q-answer>div{overflow:hidden}
+.ans-inner{opacity:0;transition:opacity .3s ease .08s}
+.qcard.open .q-answer{grid-template-rows:1fr}
+.qcard.open .ans-inner{opacity:1}
+.ans-inner{padding-top:16px}
+.ans-badge{
+  display:inline-block;font-size:14px;font-weight:800;color:#0a7a3d;
+  background:#e6f6ec;border:1px solid #bfe6cd;border-radius:10px;padding:6px 14px;letter-spacing:.02em;
+}
+.ans-analysis{margin-top:10px;font-size:14.5px;line-height:1.85;color:var(--ink-2)}
+.ans-source{margin-top:10px;font-size:12.5px;color:var(--muted);line-height:1.7}
+
+/* ---------- 看板 ---------- */
+.board-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:20px}
+@media (max-width:880px){.board-grid{grid-template-columns:1fr}}
+.panel{
+  min-width:0;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:24px 26px;
+}
+.panel h3{font-size:16.5px;font-weight:700;letter-spacing:-.01em}
+.panel .p-sub{font-size:13px;color:var(--muted);margin-top:3px;margin-bottom:18px}
+.bar-row{display:grid;grid-template-columns:96px 1fr 64px;align-items:center;gap:10px;margin-bottom:12px}
+.bar-label{font-size:13.5px;font-weight:600;color:var(--ink-2);text-align:right;white-space:nowrap}
+.bar-track{height:16px;border-radius:8px;background:rgba(0,0,0,.05);overflow:hidden}
+.bar-fill{
+  height:100%;border-radius:8px;width:0;
+  transition:width 1s cubic-bezier(.22,1,.36,1);
+}
+.bar-val{font-size:13.5px;font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px;font-size:12.5px;color:var(--muted)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.hm-scroll{overflow-x:auto}
+.heatmap{display:grid;gap:4px;min-width:430px}
+.hm-cell{
+  height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+  font-size:11.5px;font-weight:700;color:#fff;letter-spacing:.04em;
+  transition:transform .15s ease;
+}
+.hm-cell:hover{transform:scale(1.06)}
+.hm-head{height:26px;font-size:12px;font-weight:700;color:var(--muted);background:none}
+.hm-year{font-size:12.5px;font-weight:700;color:var(--muted);background:none;justify-content:flex-end;padding-right:6px;white-space:nowrap}
+.insights{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
+@media (max-width:760px){.insights{grid-template-columns:1fr}}
+.insight{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 22px;box-shadow:var(--shadow);
+}
+.insight h4{font-size:15px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.insight h4 span{width:22px;height:22px;border-radius:7px;color:#fff;font-size:12px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 22px}
+.insight p{font-size:13.5px;color:var(--ink-2);line-height:1.8}
+
+/* ---------- 预测引擎 ---------- */
+.model-factors{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:26px}
+@media (max-width:880px){.model-factors{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.model-factors{grid-template-columns:1fr}}
+.factor{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);
+}
+.factor b{display:block;font-size:13.5px;margin-bottom:4px}
+.factor code{
+  display:block;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:12.5px;color:var(--brand);background:rgba(10,90,214,.06);
+  border-radius:8px;padding:5px 8px;margin:6px 0;line-height:1.6;word-break:break-all;
+}
+.factor p{font-size:12.5px;color:var(--muted);line-height:1.7}
+.pred-note{
+  font-size:13px;color:var(--ink-2);background:#eef4ff;border:1px solid #cfdffc;
+  border-radius:12px;padding:12px 16px;line-height:1.8;margin-bottom:26px;
+}
+.pred-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:880px){.pred-grid{grid-template-columns:1fr}}
+.pred-panel{
+  min-width:0;
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:24px 26px;
+}
+.pred-panel h3{font-size:16.5px;font-weight:700;display:flex;align-items:center;gap:8px}
+.pred-panel h3 i{width:8px;height:8px;border-radius:50%;background:var(--brand);display:inline-block}
+.pred-panel .p-sub{font-size:13px;color:var(--muted);margin:3px 0 18px}
+.pct-row{margin-bottom:14px}
+.pct-top{display:flex;justify-content:space-between;align-items:baseline;font-size:13.5px;margin-bottom:5px}
+.pct-top b{font-weight:650;color:var(--ink)}
+.pct-top span{font-weight:750;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.pct-row:first-of-type .pct-top span{color:var(--brand)}
+.pct-track{height:14px;border-radius:7px;background:rgba(0,0,0,.05);overflow:hidden}
+.pct-fill{height:100%;border-radius:7px;width:0;transition:width 1.1s cubic-bezier(.22,1,.36,1)}
+.verdict{
+  margin-top:26px;position:relative;border-radius:20px;padding:2px;
+  background:linear-gradient(120deg,#0a5ad6,#7c3aed,#c9a227);
+}
+.verdict-inner{
+  background:#fff;border-radius:18px;padding:28px 30px;
+}
+.verdict h3{font-size:19px;font-weight:800;letter-spacing:-.015em;margin-bottom:12px}
+.verdict ul{list-style:none;display:grid;gap:10px}
+.verdict li{font-size:14.5px;line-height:1.8;color:var(--ink-2);padding-left:26px;position:relative}
+.verdict li::before{content:"";position:absolute;left:4px;top:12px;width:8px;height:8px;border-radius:50%;background:var(--brand)}
+.verdict li b{color:var(--ink)}
+.trend-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.trend-chips span{
+  font-size:13px;font-weight:600;color:var(--brand-deep);
+  background:rgba(10,90,214,.07);border:1px solid rgba(10,90,214,.2);border-radius:999px;padding:7px 14px;
+}
+
+/* ---------- 双视角 / 引擎 ---------- */
+.seg{display:flex;gap:6px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:4px;margin-bottom:20px;width:max-content;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.seg::-webkit-scrollbar{display:none}
+.seg button{border:none;background:transparent;font:inherit;font-size:13.5px;font-weight:600;color:var(--muted);border-radius:9px;padding:8px 16px;cursor:pointer;transition:all .2s ease;white-space:nowrap}
+.seg button.on{background:#fff;color:var(--brand);box-shadow:0 1px 4px rgba(16,32,64,.12)}
+.pct-top .ci{font-size:11.5px;color:var(--muted);font-weight:600;margin-left:6px;font-variant-numeric:tabular-nums}
+.wchip{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-2);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+.wchip i{width:8px;height:8px;border-radius:50%;background:var(--brand);display:inline-block}
+.wchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.score-table{width:100%;border-collapse:collapse;font-size:13.5px}
+.score-table th{font-size:12.5px;color:var(--muted);font-weight:600;text-align:right;padding:8px 10px;border-bottom:1.5px solid var(--line)}
+.score-table th:first-child,.score-table td:first-child{text-align:left}
+.score-table td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right;font-variant-numeric:tabular-nums}
+.score-table tr.fused td{background:rgba(10,90,214,.06);font-weight:700;border-bottom:1.5px solid rgba(10,90,214,.3)}
+.score-table .best{color:var(--brand);font-weight:700}
+.bt-wrap{max-height:340px;overflow:auto;border:1px solid var(--line);border-radius:12px}
+.bt-table{width:100%;border-collapse:collapse;font-size:13px}
+.bt-table th{position:sticky;top:0;background:var(--card);font-size:12px;color:var(--muted);font-weight:600;text-align:left;padding:8px 10px;border-bottom:1.5px solid var(--line)}
+.bt-table td{padding:7px 10px;border-bottom:1px solid var(--line)}
+.hit{color:#0a7a3d;font-weight:700}
+.miss{color:#c0392b;font-weight:700}
+.cover-row{display:flex;align-items:center;gap:12px;margin:9px 0}
+.cover-row .cv{flex:0 0 128px;font-size:13.5px;font-weight:600;color:var(--ink-2)}
+.cover-track{flex:1;height:14px;border-radius:7px;background:rgba(0,0,0,.05);overflow:hidden}
+.cover-fill{height:100%;border-radius:7px;background:linear-gradient(90deg,#0a5ad6,#3d86ff);transition:width 1s cubic-bezier(.22,1,.36,1)}
+.cover-row output{flex:0 0 52px;font-size:13px;font-weight:700;color:var(--brand);font-variant-numeric:tabular-nums;text-align:right}
+.intel-group{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 6px}
+.intel-chip{font-size:13px;font-weight:600;border:1.5px solid var(--line);background:var(--bg);color:var(--ink-2);border-radius:999px;padding:7px 14px;cursor:pointer;transition:all .15s ease;font-family:inherit}
+.intel-chip.on{border-color:var(--brand);color:var(--brand);background:rgba(10,90,214,.08)}
+.intel-chip:active{transform:scale(.96)}
+
+/* ---------- 答案选项分析 ---------- */
+.combo-flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.combo-chip{font-size:14px;font-weight:800;letter-spacing:.08em;border-radius:10px;padding:8px 14px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.combo-chip.old{opacity:.45}
+.combo-chip.hot{background:#fff7e0;border-color:#e8c96a;color:#8a5a00}
+.arrow{color:var(--muted);font-weight:700}
+.letter-bars .bar-label{flex:0 0 20px;text-align:center}
+.bigstat{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0}
+.bigstat .bs{background:var(--bg);border-radius:12px;padding:14px;text-align:center}
+.bigstat .bs b{display:block;font-size:22px;font-weight:800;color:var(--brand);font-variant-numeric:tabular-nums}
+.bigstat .bs span{font-size:12.5px;color:var(--muted)}
+.warn2{font-size:13px;color:#8a5a00;background:#fff7e0;border:1px solid #e8c96a;border-radius:12px;padding:11px 15px;line-height:1.8;margin-top:14px}
+
+/* ---------- 模拟押题 ---------- */
+.mock-head{
+  display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:14px;
+}
+.mock-badge{
+  font-size:12.5px;font-weight:800;color:#8a5a00;background:linear-gradient(135deg,#ffe9b8,#ffd76a);
+  border-radius:8px;padding:4px 10px;letter-spacing:.04em;
+}
+.quiz-opts{display:grid;gap:9px;margin-top:14px}
+.quiz-opt{
+  text-align:left;font-size:14.5px;line-height:1.65;color:var(--ink-2);
+  background:var(--bg);border:1.5px solid var(--line);border-radius:11px;padding:11px 14px;cursor:pointer;
+  font-family:inherit;transition:border-color .15s ease, background .15s ease, transform .1s ease-out;
+}
+.quiz-opt b{color:var(--ink);font-weight:700;margin-right:6px}
+.quiz-opt:hover{border-color:rgba(10,90,214,.5)}
+.quiz-opt:active{transform:scale(.985)}
+.quiz-opt.correct{background:#e6f6ec;border-color:#34a853;color:#0a5c2e}
+.quiz-opt.wrong{background:#fdecec;border-color:#e05252;color:#8f1f1f}
+.quiz-opt.dim{opacity:.55;cursor:default}
+.quiz-opt:disabled{cursor:default}
+.quiz-fb{margin-top:12px;font-size:13.5px;font-weight:600;min-height:20px}
+.quiz-fb.ok{color:#0a7a3d}
+.quiz-fb.no{color:#c0392b}
+
+/* ---------- 页脚 ---------- */
+footer{
+  margin-top:90px;border-top:1px solid var(--line);
+  background:#fff;padding:40px 20px 56px;
+}
+.foot-inner{max-width:1100px;margin:0 auto;color:var(--muted);font-size:13px;line-height:1.9}
+.foot-inner b{color:var(--ink-2)}
+.foot-inner p+p{margin-top:8px}
+
+/* ---------- 进场动画 ---------- */
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1)}
+.reveal.inview{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition-duration:.01ms !important;animation:none !important}
+  .reveal{opacity:1;transform:none}
+}
+@media (prefers-reduced-transparency:reduce){
+  .nav{background:#f5f6f8;-webkit-backdrop-filter:none;backdrop-filter:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top">粤卷 · 数学压轴<b>十年</b></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#archive">十年档案</a>
+      <a href="#stats">数据看板</a>
+      <a href="#predict">2027 预测</a>
+      <a href="#answers">答案分析</a>
+      <a href="#mock">模拟押题</a>
+    </div>
+    <a class="nav-cta" href="#predict">看预测结论</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-ghost">2027</div>
+  <div class="hero-inner">
+    <span class="kicker">基于 2017–2026 二十道真题的统计推演</span>
+    <h1>广东高考数学<br>选择压轴题 <em>2027 预测</em></h1>
+    <p class="hero-sub">21 题结构化语料 × 多模型竞争 × 万次 bootstrap 回测，给出「命题人情景 + 纯数据基线」双视角预测，并新增答案选项指纹分析。</p>
+    <div class="hero-chips">
+      <span class="chip">十年跨度 2017–2026</span>
+      <span class="chip">20 道压轴真题</span>
+      <span class="chip">6 大考点体系</span>
+      <span class="chip">模型全程公开可复算</span>
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#predict">查看预测结论</a>
+      <a class="btn btn-ghost" href="#mock">直接做模拟押题</a>
+    </div>
+    <p class="hero-note">广东省近十年均使用全国统一命题试卷：2017–2019 为全国Ⅰ卷（文理分卷），2020 年起新高考Ⅰ卷（2024 年起称新课标Ⅰ卷）。本页为 AI 整理的学习参考，一切以官方公布为准。</p>
+  </div>
+</header>
+
+<main>
+
+  <!-- ═══════════ 01 十年档案 ═══════════ -->
+  <section id="archive">
+    <div class="sec-head reveal">
+      <div class="sec-tag">01 · ARCHIVE</div>
+      <h2>十年真题档案</h2>
+      <p>点选年份，查看该年单选 / 多选压轴题的题干、选项、答案与简析。2017–2019 年文理分卷，各有一道单选压轴（第 12 题）；2020 年起分单选压轴与多选压轴。</p>
+    </div>
+    <div class="year-tabs reveal" id="yearTabs"></div>
+    <div class="year-paper" id="yearPaper"></div>
+    <div id="qList"></div>
+  </section>
+
+  <!-- ═══════════ 02 数据看板 ═══════════ -->
+  <section id="stats">
+    <div class="sec-head reveal">
+      <div class="sec-tag">02 · DATA</div>
+      <h2>数据看板：十年考点分布</h2>
+      <p>把 20 道压轴题归入六大考点后的频次与年份分布。颜色越深，代表该次出现对 2027 年预测的权重越高。</p>
+    </div>
+    <div class="board-grid">
+      <div class="panel reveal">
+        <h3>考点频次（题次）</h3>
+        <p class="p-sub">2017–2019 每年文、理各 1 道单选压轴，故按"题次"计数，共 20 题次</p>
+        <div id="barChart"></div>
+        <div class="legend" id="catLegend"></div>
+      </div>
+      <div class="panel reveal">
+        <h3>年份 × 考点热力图</h3>
+        <p class="p-sub">"单" = 单选压轴，"多" = 多选压轴；颜色深浅 = 模型权重（近两年最深）</p>
+        <div class="hm-scroll"><div class="heatmap" id="heatmap"></div></div>
+        <p style="font-size:12.5px;color:var(--muted);margin-top:12px">★ = 与 2027 年同一命题人（2025、2026），模型中权重最高；悬停单元格可查看具体权重。</p>
+      </div>
+    </div>
+    <div class="insights" id="insights"></div>
+    <div class="panel reveal" style="margin-top:20px">
+      <h3>全语料时间带（21 题 · 2007 + 2017–2026）</h3>
+      <p class="p-sub">重型引擎的完整语料：2008–2016 年检索受限于来源基础设施，如实标记缺失（详见下方模型实验室说明）</p>
+      <div class="hm-scroll"><div id="timeline" style="min-width:560px"></div></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 03 2027 预测 ═══════════ -->
+  <section id="predict">
+    <div class="sec-head reveal">
+      <div class="sec-tag">03 · FORECAST</div>
+      <h2>2027 预测引擎 · 双视角</h2>
+      <p>重型引擎在 21 题结构化语料上让五个模型竞争、网格穷举调参并做 10000 次 bootstrap。它给出两把尺子：<b>纯数据基线</b>（贝叶斯模型平均，分布坦率地平）与<b>命题人连续性情景</b>（若 2025/2026/2027 同一命题人的信息为真）。回测成绩单全部公开。</p>
+    </div>
+
+    <div class="seg" id="viewSeg">
+      <button data-view="era" class="on">视角一 · 命题人连续性情景</button>
+      <button data-view="engine">视角二 · 纯数据引擎基线（含置信区间）</button>
+    </div>
+
+    <div class="pred-grid">
+      <div class="pred-panel reveal">
+        <h3><i></i>2027 · 单选压轴（第 8 题）</h3>
+        <p class="p-sub" id="singleSub"></p>
+        <div id="predSingle"></div>
+      </div>
+      <div class="pred-panel reveal">
+        <h3><i></i>2027 · 多选压轴（第 11 题）</h3>
+        <p class="p-sub" id="multiSub"></p>
+        <div id="predMulti"></div>
+      </div>
+    </div>
+
+    <div class="pred-note reveal">
+      <b>怎么读这两个视角？</b>视角一把"2025/2026/2027 同一命题人"当作核心假设，权重压在近两年偏好上（函数·新定义 / 三角·解三角形）；视角二只信数据——回测显示在 14 个历史目标年上没有任何模型能稳定押中 Top1（命中率甚至低于随机），所以它给出接近平坦、带置信区间的分布。<b>两把尺子的交集才是理性策略：</b>按视角一排优先级，按视角二保持对全部六类的复习覆盖。
+    </div>
+
+    <div class="verdict reveal">
+      <div class="verdict-inner">
+        <h3>结论（由引擎数据生成）</h3>
+        <ul id="verdictList"></ul>
+        <div class="wchips" id="weightChips"></div>
+        <div class="trend-chips">
+          <span>新定义 / 创新情境常态化</span>
+          <span>压轴单选"去导数化"</span>
+          <span>跨章节融合（集合×概率、曲线×不等式）</span>
+          <span>多想少算、思维量大于计算量</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="board-grid" style="margin-top:20px">
+      <div class="panel reveal">
+        <h3>单选 × 多选 联合概率 Top4</h3>
+        <p class="p-sub">十年里两种压轴从未考过同一考点，同考点组合已惩罚</p>
+        <div id="jointTop"></div>
+      </div>
+      <div class="panel reveal">
+        <h3>复习覆盖策略（纯数据视角）</h3>
+        <p class="p-sub">练前 n 类考点能覆盖多少模型概率——这是命中率最实际的用法</p>
+        <div id="covBox"></div>
+      </div>
+    </div>
+
+    <div class="panel reveal" style="margin-top:20px">
+      <h3>模型成绩单（14 个历史目标年滚动回测）</h3>
+      <p class="p-sub">每一年只用"此前年份"训练再对答案；uniform = 六类均分的随机基线</p>
+      <div class="hm-scroll"><table class="score-table" id="scoreTable"></table></div>
+      <p class="lab-note" style="font-size:12.5px;color:var(--muted);line-height:1.8;margin-top:12px">诚实结论：Top1 命中率 14.3%（bootstrap 95% CI [0.0, 0.357]），不高于随机的 16.7%；Top3 命中率 71.4%（CI [0.50, 0.93]）。融合 Brier 0.1593 略差于均匀基线 0.1389——在每年仅 2~3 个数据点的问题上，<b>没有任何统计模型能可靠押中单一考点</b>，本引擎的价值是把不确定性量化并给出覆盖策略。命题人连续性属非官方信息，无法用 2017–2024 历史验证，请自行判断采信程度。</p>
+    </div>
+
+    <div class="panel reveal" style="margin-top:20px">
+      <h3>逐年回测明细</h3>
+      <p class="p-sub">s = 单选压轴，m = 多选压轴；"真实"为当年实际考点</p>
+      <div class="bt-wrap"><table class="bt-table" id="btRows"></table></div>
+    </div>
+
+    <div class="panel reveal" style="margin-top:20px">
+      <h3>情报叠加器（可选）</h3>
+      <p class="p-sub">把你自己掌握的新信息叠加上去：勾选最近模考卷压轴考过的考点，引擎分布即时按 1.6× 加权再归一</p>
+      <p style="font-size:13px;font-weight:600;color:var(--ink-2);margin-top:6px">单选模考压轴考过：</p>
+      <div class="intel-group" id="intelSingle"></div>
+      <p style="font-size:13px;font-weight:600;color:var(--ink-2)">多选模考压轴考过：</p>
+      <div class="intel-group" id="intelMulti"></div>
+      <div id="intelBox"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 03½ 答案选项分析 ═══════════ -->
+  <section id="answers">
+    <div class="sec-head reveal">
+      <div class="sec-tag">03½ · OPTION DNA</div>
+      <h2>答案选项分析：去年 ABC，今年 BCD，明年呢？</h2>
+      <p>对答案字母与组合做独立统计。先说结论：<b>它是弱先验</b>——答案由数学内容决定，但官方命题确实存在"组合类型"与"字母平衡"上的结构倾向，值得一 看，不值得赌。</p>
+    </div>
+    <div class="panel reveal" style="margin-bottom:20px">
+      <h3>2027 答案组合预测器（四层因子模型）</h3>
+      <p class="p-sub">组合历史频率 × 大小先验 × 字母基率 × 编辑距离核（锚定 2026 BCD / 2025 ABC，历史演化规律为"保留 B、每次只换/增删一个字母"）× 外部先验「多选一般不选 AB」（×0.5，来自你提供的统计，源码可调）。输出为倾向排序，非确定性预言。</p>
+      <div id="comboPred"></div>
+      <details style="margin-top:12px">
+        <summary style="cursor:pointer;font-size:13.5px;color:var(--brand);font-weight:600">展开全部 15 个组合的完整分布</summary>
+        <div id="comboFull" style="margin-top:12px"></div>
+      </details>
+    </div>
+    <div class="board-grid">
+      <div class="panel reveal">
+        <h3>多选压轴答案组合史（2020→2026）</h3>
+        <p class="p-sub">七年答案依次为：</p>
+        <div class="combo-flow" id="comboFlow"></div>
+        <div class="bigstat" id="sizeStats"></div>
+        <p style="font-size:13.5px;color:var(--ink-2);line-height:1.9">三选组合已成主流（近四年连续三选），2020 年出现过"多选题只有一个答案 A"的极端情形。</p>
+      </div>
+      <div class="panel reveal">
+        <h3>字母出现率与错项倾向（多选）</h3>
+        <p class="p-sub" style="margin-bottom:10px">某字母出现在正确答案中的频率（Laplace 平滑）：</p>
+        <div class="bar-row"><span class="bar-label">A</span><span class="bar-track"><span class="bar-fill" data-w="62" style="background:#2563eb"></span></span><span class="bar-val">56%</span></div>
+        <div class="bar-row"><span class="bar-label">B</span><span class="bar-track"><span class="bar-fill" data-w="87" style="background:#7c3aed"></span></span><span class="bar-val">78%</span></div>
+        <div class="bar-row"><span class="bar-label">C</span><span class="bar-track"><span class="bar-fill" data-w="49" style="background:#059669"></span></span><span class="bar-val">44%</span></div>
+        <div class="bar-row"><span class="bar-label">D</span><span class="bar-track"><span class="bar-fill" data-w="62" style="background:#d97706"></span></span><span class="bar-val">56%</span></div>
+        <p style="font-size:13.5px;color:var(--ink-2);line-height:1.9;margin-top:12px"><b>B 七年全对、从未当过错项</b>；C 最常"陪跑"（4 次错项，2023/2024 连续当唯一错项）；近三年唯一错项依次为 C、D、A。</p>
+        <div class="warn2">2027 组合预测（弱先验）：含 B ≈ 78%；三选组合 ≈ 50%；组合层面的完整概率分布见上方「2027 答案组合预测器」——B 连任与单换演化（BD/BC）是最值得防的方向。这些数字只反映历史结构倾向，<b>不构成押字母依据</b>——把 B 当"重点怀疑对象"、把 C 当"最可疑错项"即可。</div>
+      </div>
+    </div>
+    <div class="panel reveal" style="margin-top:20px">
+      <h3>单选压轴答案字母分布（2007+2017–2026，共 14 题）</h3>
+      <p class="p-sub">A×4 · B×6 · C×1 · D×3 —— B 最高频但绝无保证；整卷其他选择题会做字母平衡，压轴题单题字母参考价值有限</p>
+      <div id="singleLetters"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ 04 模拟押题 ═══════════ -->
+  <section id="mock">
+    <div class="sec-head reveal">
+      <div class="sec-tag">04 · MOCK</div>
+      <h2>原创模拟押题</h2>
+      <p>按模型给出的高概率考点原创命制 2 道单选 + 2 道多选，全部答案经逐题推演验证。点击选项即可作答，答错可重选。</p>
+    </div>
+    <div id="mockList"></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <p><b>可复现</b>：语料 core_questions.json、引擎 engine.py、结果 engine_output.json 与本页同目录；页面内嵌引擎输出，全部数字可重算验证。</p><p><b>数据来源</b>：本页真题与简析整理自《近十年广东高考数学选择压轴题汇编（2017—2026）》（题目与答案来自中国教育在线、新浪教育、学科网、人民网等公开转载，关键答案均经多来源交叉验证）。完整原始链接见该汇编文档。</p>
+    <p><b>免责声明</b>：本页由 AI 生成，预测为概率模型推演结果，仅供学习参考，不构成任何押题承诺；"命题人连续性"为非官方信息，模型假设请在源码中自行调整。正式信息以教育部教育考试院及广东省教育考试院公布为准。</p>
+    <p><b>生成日期</b>：2026 年 9 月 · 适用对象：2027 届广东考生</p>
+  </div>
+</footer>
+
+<script>
+/* ================= 数据 ================= */
+const CATS = {
+  "立体几何":  {color:"#2563eb", short:"立几"},
+  "函数与导数":{color:"#7c3aed", short:"函数"},
+  "解析几何":  {color:"#059669", short:"解析"},
+  "概率统计":  {color:"#d97706", short:"概率"},
+  "三角与解三角形":{color:"#dc2626", short:"三角"},
+  "数列":      {color:"#0891b2", short:"数列"}
+};
+/* 命题人连续性权重：2025/2026 与 2027 同一命题人 → 权重最高。可自行调整。 */
+const W = {2026:3, 2025:3, 2024:1, 2023:0.7, 2022:0.5, 2021:0.35, 2020:0.25, 2019:0.18, 2018:0.12, 2017:0.08};
+const CUR = 2026;
+
+const QUESTIONS = [
+ {year:2026, paper:"新课标Ⅰ卷", slot:"single", qnum:"第 8 题", cats:["概率统计"], tags:["集合计数","古典概型","数学期望"],
+  stem:"设 U＝{(x₁,x₂,x₃)｜xᵢ∈{−2,−1,1,2}，i＝1,2,3} 为空间中 64 个点构成的集合，点 P(1,1,1)，记样本空间 Ω＝U∖{P}。从 Ω 中随机取一个点 A(x₁,x₂,x₃)，令 X(A)＝x₁＋x₂＋x₃，则 X 的数学期望为（　）",
+  options:["−1/21","−1/63","0","1/7"],
+  answer:"A", analysis:"每个坐标在 {−2,−1,1,2} 上对称，故 64 个点的 X 值总和为 0；挖去 X(P)=1+1+1=3 后，余下 63 个点总和为 −3，故 E(X)＝−3/63＝−1/21，选 A。",
+  note:"题干以原卷截图为准：汇编版 X＝x₁+2x₂+3x₃ 系 OCR 误差（按该版本会得 −2/21，与真实选项不符）；答案 A 两来源一致。",
+  source:"用户提供原卷截图 / 微信公众号真题解析交叉验证"},
+ {year:2026, paper:"新课标Ⅰ卷", slot:"multi", qnum:"第 11 题", cats:["解析几何"], tags:["直线与圆","弦长","最值"],
+  stem:"已知圆 C₁：(x+1)²＋y²＝1，圆 C₂：(x−1)²＋y²＝1，圆 C₃：x²＋(y−√3)²＝1，直线 l：y＝kx＋b 与 C₁、C₂、C₃ 均有两个交点。记 l 被 C₁、C₂、C₃ 截得的弦长分别为 s₁、s₂、s₃，则（　）",
+  options:["k 可以取任意实数","满足 s₁＝s₂＝s₃ 的直线 l 共有 3 条","满足 s₁＋s₂＋s₃＝3 的直线 l 多于 3 条","当 b＝0 时，s₁＋s₂＋s₃ 的最大值为 2√21/3"],
+  answer:"BCD", analysis:"三圆半径均为 1、两两外切，圆心构成边长为 2 的等边三角形；当 l 平行于某条外公切线方向时不能与三圆都相交，A 错；等距直线恰为圆心三角形的 3 条中位线方向，B 对。",
+  source:"微信公众号 2026 新高考Ⅰ卷第 11 题解析"},
+ {year:2025, paper:"新课标Ⅰ卷", slot:"single", qnum:"第 8 题", cats:["函数与导数"], tags:["对数","比大小","新定义情境"],
+  stem:"若实数 x，y，z 满足 2＋log₂x＝3＋log₃y＝5＋log₅z，则 x，y，z 的大小关系不可能是（　）",
+  options:["x＞y＞z","x＞z＞y","y＞x＞z","y＞z＞x"],
+  answer:"B", analysis:"设连等式为 m，则 x＝2^(m−2)、y＝3^(m−3)、z＝5^(m−5)。取特殊值可分别实现 A、C、D；由「底数越大、曲线越平缓」可知 x＞z＞y 不可能出现。（官方得分率 0.37）",
+  source:"微信公众号权威解答 / 近三年单选压轴对比"},
+ {year:2025, paper:"新课标Ⅰ卷", slot:"multi", qnum:"第 11 题", cats:["三角与解三角形"], tags:["二倍角","正弦定理","解三角形"],
+  stem:"已知 △ABC 的面积为 1/4，若 cos2A＋cos2B＋2sinC＝2，cosA·cosB·sinC＝1/4，则（　）",
+  options:["sinC＝sin²A＋sin²B","AB＝√2","sinA＋sinB＝√6/2","AC²＋BC²＝3"],
+  answer:"ABC", analysis:"由条件二直接得 A；解得 C＝90°、A＝15°、B＝75°、外接圆半径 R＝√2/2，于是 AB＝2R·sinC＝√2（B 对）；sinA＋sinB＝sin15°＋sin75°＝√6/2（C 对）；AC²＋BC²＝AB²＝2≠3（D 错）。",
+  note:"个别来源答案标注不一，经按题干完整推演验证为 ABC。",
+  source:"微信公众号 / 学科网真题解析"},
+ {year:2024, paper:"新课标Ⅰ卷", slot:"single", qnum:"第 8 题", cats:["函数与导数"], tags:["抽象函数","递推放缩","新定义情境"],
+  stem:"已知函数 f(x) 的定义域为 R，满足 f(x)＞f(x−1)＋f(x−2)，且当 x＜3 时 f(x)＝x。则下列结论中一定正确的是（　）",
+  options:["f(10)＞100","f(20)＞1000","f(10)＜1000","f(20)＜10000"],
+  answer:"B", analysis:"由 f(1)=1、f(2)=2 及递推放缩，f(x) 呈类斐波那契增长，f(20) 必超过 1000；f(10) 仅能保证大于 89，且序列无上界，A、C、D 均不必然成立。",
+  source:"微信公众号权威解答"},
+ {year:2024, paper:"新课标Ⅰ卷", slot:"multi", qnum:"第 11 题", cats:["解析几何"], tags:["新定义轨迹","曲线与方程","不等式"],
+  stem:"某种造型可以看作图中曲线 C 的一部分。已知 C 过坐标原点 O，且 C 上的点满足：横坐标大于 −2，到点 F(2,0) 的距离与到定直线 x＝a（a＜0）的距离之积为 4，则（　）",
+  options:["a＝−2","点 (2√2, 0) 在 C 上","C 在第一象限的点的纵坐标的最大值为 1","当点 (x, y) 在 C 上时，y ≤ 4/(x+2)"],
+  answer:"ABD", analysis:"将原点代入得 2·|a|＝4，a＝−2（A 对）；曲线方程为 [(x−2)²＋y²]·(x+2)²＝16，代入 (2√2,0) 验证成立（B 对）；取 x＝√2 可算得纵坐标大于 1，C 错；由 y²＝16/(x+2)²−(x−2)² ≤ 16/(x+2)² 得 D 对。",
+  source:"微信公众号详解 / 中国教育在线试题评析"},
+ {year:2023, paper:"新课标Ⅰ卷", slot:"single", qnum:"第 8 题", cats:["三角与解三角形"], tags:["三角恒等变换"],
+  stem:"已知 sin(α−β)＝1/3，cosα·sinβ＝1/6，则 cos(2α＋2β)＝（　）",
+  options:["7/9","1/9","−1/9","−7/9"],
+  answer:"B", analysis:"sinα·cosβ＝sin(α−β)＋cosα·sinβ＝1/2，故 sin(α＋β)＝1/2＋1/6＝2/3，cos(2α＋2β)＝1−2sin²(α＋β)＝1−8/9＝1/9。",
+  source:"学科网 / 中国教育在线"},
+ {year:2023, paper:"新课标Ⅰ卷", slot:"multi", qnum:"第 12 题", cats:["立体几何"], tags:["内接与包含","空间想象"],
+  stem:"下列物体中，能够被整体放入棱长为 1（单位：m）的正方体容器（容器壁厚度忽略不计）内的有（　）",
+  options:["直径为 0.99 m 的球体","所有棱长均为 1.4 m 的四面体","底面直径为 0.01 m，高为 1.8 m 的圆柱体","底面直径为 1.2 m，高为 0.01 m 的圆柱体"],
+  answer:"ABD", analysis:"正方体棱长 1，体对角线 √3≈1.732、面对角线 √2≈1.414；C 中高 1.8 超过体对角线，无法放入。",
+  source:"今日头条 / 一号学习网真题汇编"},
+ {year:2022, paper:"新高考Ⅰ卷", slot:"single", qnum:"第 8 题", cats:["立体几何"], tags:["外接球","体积最值"],
+  stem:"已知正四棱锥的侧棱长为 l，其各顶点都在同一球面上。若该球的体积为 36π，且 3≤l≤3√3，则该正四棱锥体积的取值范围是（　）",
+  options:["[18, 81/4]","[27/4, 81/4]","[27/4, 64/3]","[18, 27]"],
+  answer:"C", analysis:"球体积 36π 得 R＝3。设球心到底面距离为 t，可推得 l²＝18−6t，V＝(2/3)(9−t²)h。由 l²∈[9,27] 得 V 在 l²＝9 处取 27/4、在 l²＝24 处取最大值 64/3，故范围为 [27/4, 64/3]。",
+  source:"学科网精品解析 / 中国教育在线"},
+ {year:2022, paper:"新高考Ⅰ卷", slot:"multi", qnum:"第 12 题", cats:["函数与导数"], tags:["对称性与周期性","抽象函数"],
+  stem:"已知函数 f(x) 及其导函数 f′(x) 的定义域均为 R，记 g(x)＝f′(x)。若 f(5/2−2x) 与 g(2＋x) 均为偶函数，则（　）",
+  options:["f′(0)＝0","g(−1/2)＝0","f(−1)＝f(4)","g(−1)＝g(2)"],
+  answer:"BC", analysis:"f(5/2−2x) 为偶函数 ⇒ f(x)＝f(5−x)，f 关于 x＝5/2 对称；g(2＋x) 为偶函数 ⇒ f′(x)＝f′(4−x)。可推得 f′(5/2)＝0，进而 f′(−1/2)＝f′(5/2)＝0（B 对）；由 f′ 的对称性积分可证 f(6)＝f(1)，即 f(−1)＝f(4)（C 对）；取 f′(x)＝cos(πx) 为反例可知 A、D 不必然成立。",
+  note:"个别选项符号按通行原卷版本补录。",
+  source:"新浪教育官方参考答案 / 人人文库原卷"},
+ {year:2021, paper:"新高考Ⅰ卷", slot:"single", qnum:"第 8 题", cats:["概率统计"], tags:["相互独立事件"],
+  stem:"有 6 个相同的球，分别标有数字 1,2,3,4,5,6，从中有放回地随机取两次，每次取 1 个球。甲表示事件「第一次取出的球的数字是 1」，乙表示事件「第二次取出的球的数字是 2」，丙表示事件「两次取出的球的数字之和是 8」，丁表示事件「两次取出的球的数字之和是 7」，则（　）",
+  options:["甲与丙相互独立","甲与丁相互独立","乙与丙相互独立","丙与丁相互独立"],
+  answer:"B", analysis:"P(丁)＝6/36＝1/6，且无论第一次取到几，丁发生的条件概率均为 1/6，故甲与丁相互独立；同理可验甲与丙、乙与丙、丙与丁均不独立。",
+  source:"中国教育在线 / 人人文库原卷"},
+ {year:2021, paper:"新高考Ⅰ卷", slot:"multi", qnum:"第 12 题", cats:["立体几何"], tags:["空间向量","动点轨迹"],
+  stem:"在正三棱柱 ABC-A₁B₁C₁ 中，AB＝AA₁＝1，点 P 满足 BP＝λ·BC＋μ·BB₁，其中 λ∈[0,1]，μ∈[0,1]，则（　）",
+  options:["当 λ＝1 时，△AB₁P 的周长为定值","当 μ＝1 时，三棱锥 P-A₁BC 的体积为定值","当 λ＝1/2 时，有且仅有一个点 P，使得 A₁P⊥BP","当 μ＝1/2 时，有且仅有一个点 P，使得 A₁B⊥平面 AB₁P"],
+  answer:"BD", analysis:"λ＝1 时 P 在线段 B₁C₁ 上，△AB₁P 周长变化（A 错）；μ＝1 时 P 在线段 B₁C₁ 上，B₁C₁∥平面 A₁BC，P 到平面距离为定值，体积为定值（B 对）；λ＝1/2 时建系可解得满足垂直条件的 μ＝0 或 1，共两个点（C 错）；μ＝1/2 时解得唯一 P 与 CC₁ 中点重合（D 对）。",
+  source:"搜狐解析 / 学科网专题"},
+ {year:2020, paper:"新高考Ⅰ卷", slot:"single", qnum:"第 8 题", cats:["函数与导数"], tags:["奇偶性","单调性","解不等式"],
+  stem:"若定义在 R 的奇函数 f(x) 在 (−∞,0) 上单调递减，且 f(2)＝0，则满足 x·f(x−1)≥0 的 x 的取值范围是（　）",
+  options:["[−1,1]∪[3,+∞)","[−3,−1]∪[0,1]","[−1,0]∪[1,+∞)","[−1,0]∪[1,3]"],
+  answer:"D", analysis:"f(x)≥0 当且仅当 x∈(−∞,−2]∪[0,2]；分 x＞0、x＜0、x＝0 讨论，可得 x∈[−1,0]∪[1,3]。",
+  source:"新浪教育 / 人人文库原卷"},
+ {year:2020, paper:"新高考Ⅰ卷", slot:"multi", qnum:"第 12 题", cats:["立体几何"], tags:["球","外接圆"],
+  stem:"已知 A，B，C 为球 O 的球面上的三个点，⊙O₁ 为 △ABC 的外接圆。若 ⊙O₁ 的面积为 4π，AB＝BC＝AC＝OO₁，则球 O 的表面积为（　）",
+  options:["64π","48π","36π","32π"],
+  answer:"A", analysis:"⊙O₁ 面积 4π ⇒ 半径 r＝2；△ABC 为正三角形，边长 AB＝2r·sin60°＝2√3＝OO₁；球半径 R＝√(r²＋OO₁²)＝√(4＋12)＝4，表面积 4πR²＝64π。",
+  source:"学科网解析与真题汇编"},
+ {year:2019, paper:"全国Ⅰ卷 · 理科", slot:"single", qnum:"第 12 题", cats:["立体几何"], tags:["外接球","补形法"],
+  stem:"已知三棱锥 P-ABC 的四个顶点在球 O 的球面上，PA＝PB＝PC，△ABC 是边长为 2 的正三角形，E，F 分别是 PA，AB 的中点，∠CEF＝90°，则球 O 的体积为（　）",
+  options:["8√6π","4√6π","2√6π","√6π"],
+  answer:"D", analysis:"由 PA＝PB＝PC 知 P-ABC 为正三棱锥，可证 PB⊥平面 PAC，从而 PB＝PA＝PC＝√2，补形为棱长 √2 的正方体，外接球直径 d＝√6，体积 V＝(π/6)d³＝√6π。",
+  source:"凤凰网 / 百度教育"},
+ {year:2019, paper:"全国Ⅰ卷 · 文科", slot:"single", qnum:"第 12 题", cats:["解析几何"], tags:["椭圆","焦点弦"],
+  stem:"已知椭圆 C 的焦点为 F₁(−1,0)，F₂(1,0)，过 F₂ 的直线与 C 交于 A，B 两点。若 |AF₂|＝2|F₂B|，|AB|＝|BF₁|，则 C 的方程为（　）",
+  options:["x²/2＋y²＝1","x²/3＋y²/2＝1","x²/4＋y²/3＝1","x²/5＋y²/4＝1"],
+  answer:"B", analysis:"设 |F₂B|＝t，则 |AF₂|＝2t、|AB|＝3t＝|BF₁|；由椭圆定义 |BF₁|＋|BF₂|＝2a 得 t＝a/2；在 △ABF₁ 中用余弦定理解得 a²＝3，b²＝a²−c²＝2。",
+  source:"闽南网 / 台海网官方试题"},
+ {year:2018, paper:"全国Ⅰ卷 · 理科", slot:"single", qnum:"第 12 题", cats:["立体几何"], tags:["正方体截面"],
+  stem:"已知正方体的棱长为 1，每条棱所在直线与平面 α 所成的角都相等，则 α 截此正方体所得截面面积的最大值为（　）",
+  options:["3√3/4","2√3/3","3√2/4","√3/2"],
+  answer:"A", analysis:"满足条件的 α 与各面对角线平行，最大截面为过六条棱中点的正六边形，边长 √2/2，面积 6×(√3/4)×(√2/2)²＝3√3/4。",
+  source:"百度教育 / 百度文库"},
+ {year:2018, paper:"全国Ⅰ卷 · 文科", slot:"single", qnum:"第 12 题", cats:["函数与导数"], tags:["分段函数","指数不等式"],
+  stem:"设函数 f(x)＝2^(−x)（x≤0），f(x)＝1（x＞0），则满足 f(x＋1)＜f(2x) 的 x 的取值范围是（　）",
+  options:["(−∞,−1]","(0,+∞)","(−1,0)","(−∞,0)"],
+  answer:"D", analysis:"x≤−1 时，2^(−x−1)＜2^(−2x) ⇔ x＜1，全部满足；−1＜x≤0 时，f(x＋1)＝1＜2^(−2x) ⇔ x＜0，满足；x＞0 时两边均为 1，不满足。综上 x＜0。",
+  note:"个别选项端点开闭在不同来源中略有出入，答案 D 两来源一致且经推演验证。",
+  source:"人人文库 / 学科网"},
+ {year:2017, paper:"全国Ⅰ卷 · 理科", slot:"single", qnum:"第 12 题", cats:["数列"], tags:["新定义数列","分组求和"],
+  stem:"几位大学生响应国家的创业号召，开发了一款应用软件。为激发大家学习数学的兴趣，他们推出了「解数学题获取软件激活码」的活动。这款软件的激活码为下面数学问题的答案：已知数列 1, 1, 2, 1, 2, 4, 1, 2, 4, 8, 1, 2, 4, 8, 16, …，其中第一项是 2⁰，接下来的两项是 2⁰, 2¹，再接下来的三项是 2⁰, 2¹, 2²，依此类推。求满足如下条件的最小整数 N：N＞100 且该数列的前 N 项和为 2 的整数幂。那么该款软件的激活码是（　）",
+  options:["440","330","220","110"],
+  answer:"A", analysis:"第 k 组为 2⁰, 2¹, …, 2^(k−1)，组和为 2^k−1；前 k 组共 k(k+1)/2 项、总和 2^(k+1)−k−2。设再取下一组前 m 项，总和为 2^(k+1)＋2^m−k−3；令其为 2 的整数幂，可取 2^m−1＝k＋2，即 k＝2^m−3。m＝4 时 k＝13，N＝91＋4＝95≤100 不合题意；m＝5 时 k＝29，N＝435＋5＝440。",
+  source:"高考直通车 / 人民网教育"},
+ {year:2017, paper:"全国Ⅰ卷 · 文科", slot:"single", qnum:"第 12 题", cats:["解析几何"], tags:["椭圆","最值张角"],
+  stem:"设 A，B 是椭圆 C：x²/3＋y²/m＝1 长轴的两个端点。若 C 上存在点 M 满足 ∠AMB＝120°，则 m 的取值范围是（　）",
+  options:["(0,1]∪[9,+∞)","(0,√3]∪[9,+∞)","(0,1]∪[4,+∞)","(0,√3]∪[4,+∞)"],
+  answer:"A", analysis:"当 0＜m＜3 时长轴在 x 轴，短半轴 √m：存在 M 使 ∠AMB＝120° 需短轴端点张角 ≥120°，即 arctan(√3/√m)≥60°，得 m≤1；当 m＞3 时长轴在 y 轴，同理得 m≥9。",
+  source:"河南招生 / 新东方"}
+];
+
+/* 模拟押题（原创，答案已逐题推演验证） */
+const MOCKS = [
+ {type:"单选 · 模拟第 8 题", cats:["函数与导数"], tags:["新定义递推","周期性"],
+  pslot:"single", echo:"呼应 2024 递推与 2025 新情境风格",
+  stem:"已知定义在 N* 上的函数 f(x) 满足：f(1)＝1，f(2)＝2，且 f(n＋2)＝f(n＋1)＋2f(n)。则 f(2027) 除以 5 的余数为（　）",
+  options:["1","2","3","4"],
+  answer:"D",
+  analysis:"f(3)＝f(2)＋2f(1)＝4，猜想 f(n)＝2^(n−1)；归纳验证：设 f(n)＝2^(n−1)、f(n＋1)＝2^n，则 f(n＋2)＝2^n＋2·2^(n−1)＝2^(n＋1) ✓。故 f(2027)＝2^2026。计算 2^k mod 5：2,4,3,1 循环，周期为 4；2026＝4×506＋2，故 2^2026 mod 5＝4。选 D。"},
+ {type:"单选 · 模拟第 8 题（备选）", cats:["概率统计"], tags:["分布列","期望"],
+  pslot:"single", echo:"呼应 2021 独立性、2026 期望风格",
+  stem:"有 6 个相同的球，分别标有数字 1,2,3,4,5,6，从中有放回地随机取两次，每次取 1 个球。记随机变量 X 为两次取出的数字之差的绝对值，则 E(X)＝（　）",
+  options:["35/18","2","17/9","7/4"],
+  answer:"A",
+  analysis:"共有 36 个等可能结果。|X|＝0 有 6 个；1 有 10 个；2 有 8 个；3 有 6 个；4 有 4 个；5 有 2 个。E(X)＝(0×6＋1×10＋2×8＋3×6＋4×4＋5×2)/36＝70/36＝35/18。选 A。"},
+ {type:"多选 · 模拟第 11 题", cats:["三角与解三角形"], tags:["正弦定理","面积","外接圆"],
+  pslot:"multi", echo:"呼应 2025 解三角形压轴风格",
+  stem:"在 △ABC 中，内角 A，B，C 所对的边分别为 a，b，c。已知 (2a−c)·cosB＝b·cosC，则（　）",
+  options:["B＝60°","若 a＝1，c＝2，则 b＝√3","若 a＝1，c＝2，则 △ABC 的面积为 √3/2","若 a＝1，c＝2，则 △ABC 外接圆的半径为 2√3/3"],
+  answer:"ABC",
+  analysis:"由射影定理 b·cosC＋c·cosB＝a，条件化为 2a·cosB＝a，故 cosB＝1/2，B＝60°（A 对）。a＝1，c＝2 时：b²＝a²＋c²−2ac·cosB＝1＋4−2＝3，b＝√3（B 对）；S＝(1/2)·a·c·sinB＝(1/2)×1×2×(√3/2)＝√3/2（C 对）；外接圆半径 R＝b/(2sinB)＝√3/√3＝1≠2√3/3（D 错）。选 ABC。"},
+ {type:"多选 · 模拟第 11 题（备选）", cats:["立体几何"], tags:["外接球","体积","最值"],
+  pslot:"multi", echo:"外接球是十年中立几压轴的灵魂（2019/2020/2022）",
+  stem:"已知正三棱锥 P-ABC 的底面边长为 2√3，侧棱长为 4，则（　）",
+  options:["该三棱锥的高为 2√3","该三棱锥的外接球半径为 √6","该三棱锥的体积为 6","若保持底面不变、改变侧棱长，则外接球半径的最小值为 2"],
+  answer:"ACD",
+  analysis:"底面正三角形外接圆半径 r＝(2√3)/√3＝2。高 h＝√(l²−r²)＝√(16−4)＝2√3（A 对）；体积 V＝(1/3)·(√3/4)·(2√3)²·2√3＝(1/3)·3√3·2√3＝6（C 对）；外接球半径 R＝(r²＋h²)/(2h)＝(4＋12)/(4√3)＝4√3/3≈2.31≠√6（B 错）；R＝h/2＋2/h ≥ 2（当且仅当 h＝2 即侧棱为 2√2 时取等），最小值为 2（D 对）。选 ACD。"}
+];
+
+/* 各题型（单选/多选）各考点的出现年份 —— 模型输入 */
+const SLOT_YEARS = {
+  single: {"函数与导数":[2025,2024,2020,2018], "概率统计":[2026,2021], "立体几何":[2022,2019,2018], "三角与解三角形":[2023], "解析几何":[2019,2017], "数列":[2017]},
+  multi:  {"立体几何":[2023,2021,2020], "函数与导数":[2022], "解析几何":[2026,2024], "三角与解三角形":[2025]}
+};
+
+/* ================= 渲染：十年档案 ================= */
+const years = [...new Set(QUESTIONS.map(q=>q.year))].sort((a,b)=>b-a);
+const yearTabs = document.getElementById('yearTabs');
+years.forEach(y=>{
+  const b = document.createElement('button');
+  b.className = 'ytab'; b.textContent = y; b.dataset.year = y;
+  b.addEventListener('click', ()=>{ selectYear(y); });
+  yearTabs.appendChild(b);
+});
+function optClass(opts){
+  if(!opts) return '';
+  const mx = Math.max(...opts.map(o=>o.length));
+  if(mx<=6) return 'c4'; if(mx<=16) return 'c2'; return '';
+}
+function renderQuestions(year){
+  const list = QUESTIONS.filter(q=>q.year===year);
+  document.getElementById('yearPaper').textContent = year + " · " + list[0].paper + " ｜ 广东省适用";
+  const box = document.getElementById('qList');
+  box.innerHTML = '';
+  list.forEach(q=>{
+    const card = document.createElement('article');
+    card.className = 'qcard';
+    const tags = q.cats.map(c=>`<span class="q-tag" style="color:${CATS[c].color};background:${CATS[c].color}14;border:1px solid ${CATS[c].color}44">${c}</span>`).join('')
+      + q.tags.map(t=>`<span class="q-tag" style="color:var(--muted);background:var(--bg);border:1px solid var(--line)">${t}</span>`).join('');
+    const opts = q.options
+      ? `<div class="q-opts ${optClass(q.options)}">${q.options.map((o,i)=>`<div class="q-opt"><b>${"ABCD"[i]}</b>${o}</div>`).join('')}</div>`
+      : `<div class="q-note">${q.optNote}</div>`;
+    card.innerHTML = `
+      <div class="q-top">
+        <span class="q-slot ${q.slot==='multi'?'multi':''}">${q.slot==='multi'?'多选压轴':'单选压轴'}</span>
+        <span class="q-num">${q.qnum}</span>
+        ${tags}
+      </div>
+      <p class="q-stem">${q.stem}</p>
+      ${opts}
+      ${q.note?`<div class="q-note">校核说明：${q.note}</div>`:''}
+      <div class="q-actions"><button class="q-reveal">揭晓答案与解析</button></div>
+      <div class="q-answer"><div><div class="ans-inner">
+        <span class="ans-badge">参考答案　${q.answer}</span>
+        <p class="ans-analysis">${q.analysis}</p>
+        <p class="ans-source">来源：${q.source}（完整原始链接见汇编文档）</p>
+      </div></div></div>`;
+    card.querySelector('.q-reveal').addEventListener('click', e=>{
+      card.classList.toggle('open');
+      e.target.textContent = card.classList.contains('open') ? '收起解析' : '揭晓答案与解析';
+    });
+    box.appendChild(card);
+  });
+}
+function selectYear(year){
+  document.querySelectorAll('.ytab').forEach(t=>t.classList.toggle('on', +t.dataset.year===year));
+  renderQuestions(year);
+}
+selectYear(2026);
+
+/* ================= 渲染：看板 ================= */
+const counts = {};
+QUESTIONS.forEach(q=>q.cats.forEach(c=>counts[c]=(counts[c]||0)+1));
+const maxC = Math.max(...Object.values(counts));
+document.getElementById('barChart').innerHTML = Object.keys(CATS).map(c=>`
+  <div class="bar-row">
+    <span class="bar-label">${c}</span>
+    <span class="bar-track"><span class="bar-fill" data-w="${counts[c]/maxC*100}" style="background:${CATS[c].color}"></span></span>
+    <span class="bar-val">${counts[c]} 次</span>
+  </div>`).join('');
+document.getElementById('catLegend').innerHTML = Object.keys(CATS).map(c=>`<span><i style="background:${CATS[c].color}"></i>${c}</span>`).join('');
+
+const hm = document.getElementById('heatmap');
+const shortNames = Object.keys(CATS);
+hm.style.gridTemplateColumns = `68px repeat(${shortNames.length}, 1fr)`;
+let html2 = '<div class="hm-cell hm-head"></div>' + shortNames.map(c=>`<div class="hm-cell hm-head">${CATS[c].short}</div>`).join('');
+[...years].reverse().forEach(y=>{
+  const star = y >= 2025 ? ' ★' : '';
+  const tip = y >= 2025 ? `（与 2027 同一命题人，权重最高）` : '';
+  html2 += `<div class="hm-cell hm-year" title="${y}年${tip}">${y}${star}</div>`;
+  shortNames.forEach(c=>{
+    const hits = QUESTIONS.filter(q=>q.year===y && q.cats.includes(c));
+    if(!hits.length){ html2 += `<div class="hm-cell" style="background:rgba(0,0,0,.035)"></div>`; }
+    else{
+      const w = Math.min(...hits.map(q=>W[q.year]));
+      const label = hits.map(q=>q.slot==='multi'?'多':'单').join('');
+      const a = (0.22 + 0.78*w/3).toFixed(2);
+      html2 += `<div class="hm-cell" style="background:${CATS[c].color};opacity:${a}" title="${y}年 · ${c} · ${label}选压轴 · 权重 ${w}">${label}</div>`;
+    }
+  });
+});
+hm.innerHTML = html2;
+
+document.getElementById('insights').innerHTML = [
+  {c:"#2563eb", t:"外接球是立几压轴的灵魂", d:"十年中立几共出现 6 次，其中 2019 理、2020 多选、2022 单选三次直接考外接球 / 内接球，2021 考空间向量动点，2023 考正方体容纳问题。"},
+  {c:"#7c3aed", t:"函数与导数是单选压轴近五年主力", d:"2020 奇偶单调、2024 抽象递推、2025 比大小、2022 多选对称周期——尤其偏爱「新情境下的函数思维」，而非套路求导。"},
+  {c:"#d97706", t:"新定义 / 创新情境已成常态", d:"2017 激活码数列、2024 距离之积曲线、2025 对数比大小、2026 集合计数取点——近三年年年有新定义味道，死记题型越来越难。"},
+  {c:"#dc2626", t:"两个值得注意的空白", d:"① 近五年单选压轴没有一道纯导数运算题；② 多选压轴七年来从未考过概率统计——「空白」本身也是一种预测信号。"}
+].map((x,i)=>`<div class="insight"><h4><span style="background:${x.c}">${i+1}</span>${x.t}</h4><p>${x.d}</p></div>`).join('');
+
+/* ================= 重型引擎结果（engine_output.json 内嵌，可复现：engine.py） ================= */
+const ENGINE = {"generated": "2026-09-13", "target": 2027, "corpus": {"core": 21, "slots": {"single": {"2007": ["函数与导数"], "2017": ["数列", "解析几何"], "2018": ["函数与导数", "立体几何"], "2019": ["立体几何", "解析几何"], "2020": ["函数与导数"], "2021": ["概率统计"], "2022": ["立体几何"], "2023": ["三角与解三角形"], "2024": ["函数与导数"], "2025": ["函数与导数"], "2026": ["概率统计"]}, "multi": {"2020": ["立体几何"], "2021": ["立体几何"], "2022": ["函数与导数"], "2023": ["立体几何"], "2024": ["解析几何"], "2025": ["三角与解三角形"], "2026": ["解析几何"]}}, "missing": [{"range": "2004-2006 全国Ⅰ卷 文/理 第12题", "reason": "检索超时/限流，未获取可靠来源"}, {"range": "2008-2016 全国Ⅰ卷 文/理 第12题", "reason": "检索超时/限流，仅 2007 理成功核实"}, {"range": "新高考Ⅱ卷 / 全国甲乙卷 压轴题（2021-2026）", "reason": "辅助语料检索未执行（同上），阶段降级"}]}, "params": {"chosen": {"频率衰减": {"filler": 0.05, "gapBoost": 0.3, "repPenalty": 0.5, "window": 2}, "马尔可夫": {"alpha": 1.5}, "hazard": {"alpha": 2.0}, "风格指纹": {}, "命题人分段": {"window": 2}}, "tau": 0.05, "grid_combos": 3888}, "weights": {"频率衰减": 0.0035, "马尔可夫": 0.3497, "hazard": 0.3241, "风格指纹": 0.002, "命题人分段": 0.3207}, "models": {"频率衰减": {"top1": 0.286, "top3": 0.714, "brier": 0.1871, "logloss": 0.7341}, "马尔可夫": {"top1": 0.286, "top3": 0.643, "brier": 0.1591, "logloss": 0.5033}, "hazard": {"top1": 0.143, "top3": 0.571, "brier": 0.16, "logloss": 0.5071}, "风格指纹": {"top1": 0.071, "top3": 0.786, "brier": 0.206, "logloss": 0.7616}, "命题人分段": {"top1": 0.286, "top3": 0.714, "brier": 0.1609, "logloss": 0.5076}}, "backtest": {"rows": [{"slot": "multi", "year": 2022, "truth": ["函数与导数"], "top3": [{"cat": "立体几何", "p": 0.2827}, {"cat": "函数与导数", "p": 0.1435}, {"cat": "解析几何", "p": 0.1435}], "hit1": false, "hit3": true, "brier": 0.14932161535048297, "ll": 0.48224162134858345}, {"slot": "multi", "year": 2023, "truth": ["立体几何"], "top3": [{"cat": "函数与导数", "p": 0.2106}, {"cat": "立体几何", "p": 0.1912}, {"cat": "解析几何", "p": 0.1496}], "hit1": false, "hit3": true, "brier": 0.1313155061678504, "ll": 0.42310515305069135}, {"slot": "multi", "year": 2024, "truth": ["解析几何"], "top3": [{"cat": "函数与导数", "p": 0.2376}, {"cat": "立体几何", "p": 0.2363}, {"cat": "解析几何", "p": 0.1315}], "hit1": false, "hit3": true, "brier": 0.1530770929817837, "ll": 0.49875953888586205}, {"slot": "multi", "year": 2025, "truth": ["三角与解三角形"], "top3": [{"cat": "立体几何", "p": 0.2083}, {"cat": "解析几何", "p": 0.207}, {"cat": "概率统计", "p": 0.1462}], "hit1": false, "hit3": false, "brier": 0.1465527797126018, "ll": 0.47706240530873106}, {"slot": "multi", "year": 2026, "truth": ["解析几何"], "top3": [{"cat": "解析几何", "p": 0.2076}, {"cat": "三角与解三角形", "p": 0.2069}, {"cat": "立体几何", "p": 0.1468}], "hit1": true, "hit3": true, "brier": 0.12607014431396454, "ll": 0.40617164479387124}, {"slot": "single", "year": 2018, "truth": ["函数与导数", "立体几何"], "top3": [{"cat": "解析几何", "p": 0.1934}, {"cat": "数列", "p": 0.1934}, {"cat": "立体几何", "p": 0.1541}], "hit1": false, "hit3": true, "brier": 0.2597902644929941, "ll": 0.7542561912076483}, {"slot": "single", "year": 2019, "truth": ["立体几何", "解析几何"], "top3": [{"cat": "解析几何", "p": 0.1771}, {"cat": "数列", "p": 0.1771}, {"cat": "函数与导数", "p": 0.1765}], "hit1": true, "hit3": true, "brier": 0.24352440225335056, "ll": 0.6954602782169319}, {"slot": "single", "year": 2020, "truth": ["函数与导数"], "top3": [{"cat": "立体几何", "p": 0.2448}, {"cat": "解析几何", "p": 0.1974}, {"cat": "函数与导数", "p": 0.1893}], "hit1": false, "hit3": true, "brier": 0.133575078323539, "ll": 0.42641400539200963}, {"slot": "single", "year": 2021, "truth": ["概率统计"], "top3": [{"cat": "立体几何", "p": 0.223}, {"cat": "解析几何", "p": 0.2229}, {"cat": "函数与导数", "p": 0.19}], "hit1": false, "hit3": false, "brier": 0.15620987670570516, "ll": 0.5140508887692355}, {"slot": "single", "year": 2022, "truth": ["立体几何"], "top3": [{"cat": "函数与导数", "p": 0.223}, {"cat": "概率统计", "p": 0.2028}, {"cat": "立体几何", "p": 0.1441}], "hit1": false, "hit3": true, "brier": 0.147513564294357, "ll": 0.4800706864533453}, {"slot": "single", "year": 2023, "truth": ["三角与解三角形"], "top3": [{"cat": "概率统计", "p": 0.2137}, {"cat": "立体几何", "p": 0.2091}, {"cat": "函数与导数", "p": 0.1817}], "hit1": false, "hit3": false, "brier": 0.15516588422815322, "ll": 0.5122199421103081}, {"slot": "single", "year": 2024, "truth": ["函数与导数"], "top3": [{"cat": "立体几何", "p": 0.2182}, {"cat": "三角与解三角形", "p": 0.1996}, {"cat": "概率统计", "p": 0.1587}], "hit1": false, "hit3": false, "brier": 0.14828007278888328, "ll": 0.4836836598776217}, {"slot": "single", "year": 2025, "truth": ["函数与导数"], "top3": [{"cat": "三角与解三角形", "p": 0.1955}, {"cat": "函数与导数", "p": 0.1925}, {"cat": "立体几何", "p": 0.1787}], "hit1": false, "hit3": true, "brier": 0.1309511731394488, "ll": 0.4217488346332066}, {"slot": "single", "year": 2026, "truth": ["概率统计"], "top3": [{"cat": "函数与导数", "p": 0.2753}, {"cat": "立体几何", "p": 0.1759}, {"cat": "概率统计", "p": 0.1454}], "hit1": false, "hit3": true, "brier": 0.1486143888691708, "ll": 0.4795502026668906}], "summary": {"brier": 0.1593, "logloss": 0.5039, "top1": 0.1429, "top3": 0.7143}, "top1_ci95": [0.0, 0.357], "top3_ci95": [0.5, 0.929], "n_targets": 14}, "final": {"single": {"立体几何": {"p": 0.178, "lo": 0.15582837102846503, "hi": 0.18990680654848058}, "函数与导数": {"p": 0.2022, "lo": 0.1902756694273212, "hi": 0.26063426177971183}, "解析几何": {"p": 0.1289, "lo": 0.11902513120343274, "hi": 0.13083708191913548}, "概率统计": {"p": 0.2011, "lo": 0.18975231369730539, "hi": 0.22008645271650173}, "三角与解三角形": {"p": 0.1611, "lo": 0.13808161441729147, "hi": 0.1685696339834795}, "数列": {"p": 0.1287, "lo": 0.11086232714216993, "hi": 0.13075790719211577}}, "multi": {"立体几何": {"p": 0.1359, "lo": 0.13457140332729528, "hi": 0.15280500322607757}, "函数与导数": {"p": 0.1352, "lo": 0.12354251601827447, "hi": 0.13737407845020022}, "解析几何": {"p": 0.2118, "lo": 0.20448783339850668, "hi": 0.23126842331044656}, "概率统计": {"p": 0.1347, "lo": 0.10548701270995924, "hi": 0.13721787439383337}, "三角与解三角形": {"p": 0.2479, "lo": 0.24605746151954086, "hi": 0.282356281804038}, "数列": {"p": 0.1347, "lo": 0.10548701270995924, "hi": 0.13721787439383337}}}, "scenario_era": {"single": {"立体几何": 0.134, "函数与导数": 0.3777, "解析几何": 0.0941, "概率统计": 0.2028, "三角与解三角形": 0.1175, "数列": 0.0739}, "multi": {"立体几何": 0.1857, "函数与导数": 0.1163, "解析几何": 0.237, "概率统计": 0.0647, "三角与解三角形": 0.3317, "数列": 0.0647}}, "joint": {"grid": {"立体几何|立体几何": 0.0042, "立体几何|函数与导数": 0.0279, "立体几何|解析几何": 0.0438, "立体几何|概率统计": 0.0278, "立体几何|三角与解三角形": 0.0512, "立体几何|数列": 0.0278, "函数与导数|立体几何": 0.0319, "函数与导数|函数与导数": 0.0048, "函数与导数|解析几何": 0.0497, "函数与导数|概率统计": 0.0316, "函数与导数|三角与解三角形": 0.0582, "函数与导数|数列": 0.0316, "解析几何|立体几何": 0.0203, "解析几何|函数与导数": 0.0202, "解析几何|解析几何": 0.0048, "解析几何|概率统计": 0.0202, "解析几何|三角与解三角形": 0.0371, "解析几何|数列": 0.0202, "概率统计|立体几何": 0.0317, "概率统计|函数与导数": 0.0316, "概率统计|解析几何": 0.0495, "概率统计|概率统计": 0.0047, "概率统计|三角与解三角形": 0.0579, "概率统计|数列": 0.0314, "三角与解三角形|立体几何": 0.0254, "三角与解三角形|函数与导数": 0.0253, "三角与解三角形|解析几何": 0.0396, "三角与解三角形|概率统计": 0.0252, "三角与解三角形|三角与解三角形": 0.007, "三角与解三角形|数列": 0.0252, "数列|立体几何": 0.0203, "数列|函数与导数": 0.0202, "数列|解析几何": 0.0317, "数列|概率统计": 0.0201, "数列|三角与解三角形": 0.037, "数列|数列": 0.003}, "top": [{"s": "函数与导数", "m": "三角与解三角形", "p": 0.0582}, {"s": "概率统计", "m": "三角与解三角形", "p": 0.0579}, {"s": "立体几何", "m": "三角与解三角形", "p": 0.0512}, {"s": "函数与导数", "m": "解析几何", "p": 0.0497}, {"s": "概率统计", "m": "解析几何", "p": 0.0495}, {"s": "立体几何", "m": "解析几何", "p": 0.0438}]}, "answers": {"single_letters": {"A": {"n": 4, "p": 0.278}, "B": {"n": 6, "p": 0.389}, "C": {"n": 1, "p": 0.111}, "D": {"n": 3, "p": 0.222}}, "multi_letters": {"A": {"n": 4, "p": 0.556}, "B": {"n": 6, "p": 0.778}, "C": {"n": 3, "p": 0.444}, "D": {"n": 4, "p": 0.556}}, "multi_sizes": {"1": 0.2, "2": 0.3, "3": 0.5}, "wrong_letter": {"A": 3, "B": 1, "C": 4, "D": 3}, "wrong_only_hist": {"BCD": 1, "AC": 1, "AD": 1, "C": 2, "D": 1, "A": 1}, "combo_hist": {"A": 1, "BD": 1, "BC": 1, "ABD": 2, "ABC": 1, "BCD": 1}, "likely_combos": [{"combo": "ABD", "n": 2, "p": 0.172}, {"combo": "A", "n": 1, "p": 0.103}, {"combo": "BD", "n": 1, "p": 0.103}, {"combo": "BC", "n": 1, "p": 0.103}, {"combo": "ABC", "n": 1, "p": 0.103}, {"combo": "BCD", "n": 1, "p": 0.103}]}, "combo_pred": {"model": "频率(Laplace) × 大小先验 × 字母基率 × 编辑距离核(锚:2026 BCD,2025 ABC) × 外部先验(不选AB ×0.5)", "top": [{"combo": "BCD", "p": 0.3687, "lo": 0.08668497502032395, "hi": 0.7003628791849451}, {"combo": "ABC", "p": 0.2194, "lo": 0.03852418909743996, "hi": 0.539587058429009}, {"combo": "ABD", "p": 0.1938, "lo": 0.020525575041727202, "hi": 0.4994910905862459}, {"combo": "BD", "p": 0.0942, "lo": 0.015533320354137663, "hi": 0.30142566013406946}, {"combo": "BC", "p": 0.0847, "lo": 0.013929503322331388, "hi": 0.277661302548663}, {"combo": "AB", "p": 0.0065, "lo": 0.00436892998099848, "hi": 0.010506723852605128}, {"combo": "ABCD", "p": 0.0061, "lo": 0.004125944297072569, "hi": 0.009922374025015885}, {"combo": "ACD", "p": 0.0058, "lo": 0.0039030430688011446, "hi": 0.00938632477221483}], "full": {"A": 0.0035, "B": 0.0054, "C": 0.0012, "D": 0.0014, "AB": 0.0065, "AC": 0.003, "AD": 0.0015, "BC": 0.0847, "BD": 0.0942, "CD": 0.005, "ABC": 0.2194, "ABD": 0.1938, "ACD": 0.0058, "BCD": 0.3687, "ABCD": 0.0061}, "extern_prior": "多选一般不选 AB（用户提供的外部统计）"}, "honesty": {"ceiling": "单选 Top1 现实上限约 50-60%，Top3 约 85-90%", "note": "瓶颈为数据量（每年 2-3 点）与命题人意图不可观测；引擎优化概率校准，不承诺押中原题", "uniform_brier": 0.1389, "uniform_top1": 0.1667}};
+
+const EVIEWS = {
+  era:    {single: ENGINE.scenario_era.single, multi: ENGINE.scenario_era.multi, ci: false,
+           sub: "命题人连续性情景 · era+频率模型各半（假设 2025/2026/2027 同一命题人）"},
+  engine: {single: {}, multi: {}, ci: true,
+           sub: "纯数据 BMA 基线 · bootstrap 95% 置信区间（条长按六类相对比例缩放）"}
+};
+for(const c of Object.keys(CATS)){
+  EVIEWS.engine.single[c] = ENGINE.final.single[c].p;
+  EVIEWS.engine.multi[c]  = ENGINE.final.multi[c].p;
+}
+let E_VIEW = "era";
+
+function renderPredView(){
+  const v = EVIEWS[E_VIEW];
+  [["single","predSingle","singleSub"],["multi","predMulti","multiSub"]].forEach(([slot, barId, subId])=>{
+    const data = Object.keys(CATS).map(c=>({cat:c, p:v[slot][c]})).sort((a,b)=>b.p-a.p);
+    const mx = Math.max(...data.map(d=>d.p), 0.001);
+    document.getElementById(subId).textContent = v.sub;
+    document.getElementById(barId).innerHTML = data.map((d,i)=>{
+      const ci = v.ci ? `<span class="ci">CI ${(ENGINE.final[slot][d.cat].lo*100).toFixed(0)}–${(ENGINE.final[slot][d.cat].hi*100).toFixed(0)}%</span>` : "";
+      const w = (d.p/mx*100).toFixed(1);
+      return `<div class="pct-row">
+        <div class="pct-top"><b>${d.cat}${i===0?'　● 最可能':''}</b><span>${(d.p*100).toFixed(1)}%${ci}</span></div>
+        <div class="pct-track"><span class="pct-fill" data-w="${w}" style="background:${CATS[d.cat].color};width:${w}%;${i===0?`box-shadow:0 2px 8px ${CATS[d.cat].color}55;`:''}"></span></div>
+      </div>`;}).join("");
+  });
+}
+document.querySelectorAll("#viewSeg button").forEach(btn=>btn.addEventListener("click", ()=>{
+  document.querySelectorAll("#viewSeg button").forEach(x=>x.classList.toggle("on", x===btn));
+  E_VIEW = btn.dataset.view;
+  renderPredView();
+}));
+renderPredView();
+
+/* ---------- 结论（由引擎数据生成） ---------- */
+(function(){
+  const S = ENGINE.scenario_era.single, M = ENGINE.scenario_era.multi;
+  const rk = o => Object.keys(CATS).map(c=>({c, p:o[c]})).sort((a,b)=>b.p-a.p);
+  const sR = rk(S), mR = rk(M);
+  const pc = x => (x*100).toFixed(1) + "%";
+  const cov = (o,n)=>rk(o).slice(0,n).reduce((s,x)=>s+x.p,0);
+  document.getElementById("verdictList").innerHTML = `
+  <li><b>情景视角（若命题人连续信息为真）</b>：单选首选 <b>函数与导数·新定义情境（${pc(sR[0].p)}）</b>，次选 概率统计（${pc(sR[1].p)}）；多选首选 <b>三角与解三角形（${pc(mR[0].p)}）</b>，次选 解析几何（${pc(mR[1].p)}）、立体几何·外接球（${pc(mR[2].p)}）。</li>
+  <li><b>纯数据视角的清醒剂</b>：14 个历史目标年回测 Top1 命中率仅 14%（≤随机 16.7%），Top3 命中 71%；2027 单选六类概率挤在 13%–20% 之间——<b>没有任何单一考点值得 all in</b>。</li>
+  <li><b>理性策略</b>：按情景排序压轴专题（函数/概率 → 三角/解析/立几），六类全覆盖；数列单选 9 年未考、多选从未考，hazard 模型提示留一手"冷门回归"。</li>
+  <li><b>数字速览</b>：纯数据 Top3 覆盖——单选 ${pc(cov(ENGINE.final.single,3))}、多选 ${pc(cov(ENGINE.final.multi,3))}；联合最可能组合 ${ENGINE.joint.top[0].s} × ${ENGINE.joint.top[0].m}（${pc(ENGINE.joint.top[0].p)}）。</li>`;
+  document.getElementById("weightChips").innerHTML =
+    Object.entries(ENGINE.weights).map(([n,v])=>`<span class="wchip"><i></i>${n} 权重 ${(v*100).toFixed(1)}%</span>`).join("") +
+    `<span class="wchip" style="color:var(--muted)">τ=${ENGINE.params.tau} · 网格 ${ENGINE.params.grid_combos} 组 · bootstrap 10000 次</span>`;
+})();
+
+/* ---------- 联合 / 覆盖 / 成绩单 / 回测明细 ---------- */
+(function(){
+  const jt = ENGINE.joint.top.slice(0,4), mx = jt[0].p;
+  document.getElementById("jointTop").innerHTML = jt.map(j=>`
+    <div class="pct-row">
+      <div class="pct-top"><b>${j.s} × ${j.m}</b><span>${(j.p*100).toFixed(1)}%</span></div>
+      <div class="pct-track"><span class="pct-fill" style="background:linear-gradient(90deg,#0a5ad6,#7c3aed);width:${(j.p/mx*100).toFixed(1)}%"></span></div>
+    </div>`).join("");
+
+  const covRows = [["单选", ENGINE.final.single], ["多选", ENGINE.final.multi]];
+  document.getElementById("covBox").innerHTML = covRows.map(([name, o])=>{
+    const r = Object.keys(CATS).map(c=>({c, p:o[c].p})).sort((a,b)=>b.p-a.p);
+    return [1,2,3].map(n=>{
+      const v = r.slice(0,n).reduce((s,x)=>s+x.p,0);
+      return `<div class="cover-row"><span class="cv">${name} · 前 ${n} 类</span><span class="cover-track"><span class="cover-fill" style="width:${(v*100).toFixed(1)}%"></span></span><output>${(v*100).toFixed(0)}%</output></div>`;
+    }).join("");
+  }).join("") + `<p style="font-size:12.5px;color:var(--muted);margin-top:10px">纯数据视角下前 3 类只覆盖约六成——这就是"别赌单一考点"的数据依据。</p>`;
+
+  const bd = ENGINE.models, sm = ENGINE.backtest.summary;
+  const bestLL = Math.min(...Object.values(bd).map(x=>x.logloss));
+  document.getElementById("scoreTable").innerHTML =
+    `<tr><th>模型</th><th>Top1</th><th>Top3</th><th>Brier ↓</th><th>LogLoss ↓</th></tr>` +
+    Object.entries(bd).map(([n,x])=>`<tr><td>${n}</td><td>${(x.top1*100).toFixed(0)}%</td><td>${(x.top3*100).toFixed(0)}%</td><td>${x.brier.toFixed(3)}</td><td class="${x.logloss===bestLL?'best':''}">${x.logloss.toFixed(3)}</td></tr>`).join("") +
+    `<tr class="fused"><td>融合（BMA）</td><td>${(sm.top1*100).toFixed(0)}%</td><td>${(sm.top3*100).toFixed(0)}%</td><td>${sm.brier.toFixed(3)}</td><td>${sm.logloss.toFixed(3)}</td></tr>` +
+    `<tr><td>均匀随机基线</td><td>17%</td><td>50%</td><td>0.139</td><td>0.693</td></tr>`;
+
+  document.getElementById("btRows").innerHTML =
+    `<tr><th>题型</th><th>目标年</th><th>真实考点</th><th>预测 Top3</th><th>Top1</th><th>Top3</th></tr>` +
+    ENGINE.backtest.rows.map(r=>`<tr>
+      <td>${r.slot==="single"?"s 单选":"m 多选"}</td><td>${r.year}</td><td>${r.truth.join("、")}</td>
+      <td>${r.top3.map(x=>x.cat).join(" / ")}</td>
+      <td class="${r.hit1?'hit':'miss'}">${r.hit1?"命中":"未中"}</td>
+      <td class="${r.hit3?'hit':'miss'}">${r.hit3?"命中":"未中"}</td></tr>`).join("");
+})();
+
+/* ---------- 情报叠加器 ---------- */
+const INTEL = {single:new Set(), multi:new Set()};
+function adjusted(slot){
+  const base = EVIEWS[E_VIEW][slot];
+  const raw = Object.keys(CATS).map(c=>({c, p: base[c] * (INTEL[slot].has(c) ? 1.6 : 1)}));
+  const t = raw.reduce((s,x)=>s+x.p, 0);
+  return raw.map(x=>({...x, p:x.p/t})).sort((a,b)=>b.p-a.p);
+}
+function renderIntel(){
+  ["single","multi"].forEach(slot=>{
+    document.getElementById(slot==="single"?"intelSingle":"intelMulti").innerHTML =
+      Object.keys(CATS).map(c=>`<button class="intel-chip ${INTEL[slot].has(c)?"on":""}" data-slot="${slot}" data-cat="${c}">${c}</button>`).join("");
+  });
+  document.getElementById("intelBox").innerHTML = ["single","multi"].map(slot=>{
+    const r = adjusted(slot).slice(0,3);
+    return `<p style="font-size:13px;margin:10px 0 4px;color:var(--ink-2)">情报调整后 ${slot==="single"?"单选":"多选"} Top3：</p>
+      <p style="font-size:14.5px;font-weight:700;color:var(--brand)">${r.map(x=>`${x.c} ${(x.p*100).toFixed(0)}%`).join(" · ")}</p>`;
+  }).join("");
+}
+["intelSingle","intelMulti"].forEach(id=>document.getElementById(id).addEventListener("click", e=>{
+  const btn = e.target.closest(".intel-chip"); if(!btn) return;
+  const set = INTEL[btn.dataset.slot], c = btn.dataset.cat;
+  set.has(c) ? set.delete(c) : set.add(c);
+  renderIntel();
+}));
+renderIntel();
+
+/* ---------- 2027 组合预测器 ---------- */
+(function(){
+  const CP = ENGINE.combo_pred;
+  const mx = CP.top[0].p;
+  document.getElementById("comboPred").innerHTML = CP.top.map((x,i)=>`
+    <div class="pct-row">
+      <div class="pct-top"><b style="letter-spacing:.06em">${x.combo}${i===0?"　● 最可能":""}</b>
+        <span>${(x.p*100).toFixed(1)}%<span class="ci">CI ${(x.lo*100).toFixed(0)}–${(x.hi*100).toFixed(0)}%</span></span></div>
+      <div class="pct-track"><span class="pct-fill" data-w="${(x.p/mx*100).toFixed(1)}" style="background:linear-gradient(90deg,#d97706,#f5b73d);width:${(x.p/mx*100).toFixed(1)}%"></span></div>
+    </div>`).join("");
+  document.getElementById("comboFull").innerHTML = Object.entries(CP.full)
+    .sort((x,y)=>y[1]-x[1]).map(([S,p])=>`<span class="wchip" style="margin:0 6px 6px 0">${S} ${(p*100).toFixed(1)}%</span>`).join("");
+})();
+
+/* ---------- 全语料时间带 ---------- */
+(function(){
+  const slots = ENGINE.corpus.slots;
+  const years = [...new Set([...Object.keys(slots.single), ...Object.keys(slots.multi)])].sort();
+  const tag = (pre,c)=>`<span class="q-tag" style="color:${CATS[c].color};background:${CATS[c].color}14;border:1px solid ${CATS[c].color}44">${pre}·${c}</span>`;
+  document.getElementById("timeline").innerHTML = years.map(y=>{
+    const s = slots.single[y] || [], m = slots.multi[y] || [];
+    const gap = y === "2007" ? '<span style="font-size:11.5px;color:var(--muted)">（2008–2016 语料缺失）</span>' : "";
+    return `<div style="display:flex;gap:10px;align-items:center;padding:7px 0;border-bottom:1px dashed var(--line);flex-wrap:wrap">
+      <span style="flex:0 0 44px;font-weight:700;color:var(--muted);font-size:13px">${y}</span>
+      <span style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">${s.map(c=>tag("单",c)).join("")}${m.map(c=>tag("多",c)).join("")}${gap}</span></div>`;
+  }).join("");
+})();
+
+/* ---------- 答案选项分析 ---------- */
+(function(){
+  const A = ENGINE.answers;
+  const hist = ["A","BD","BC","ABD","ABD","ABC","BCD"];
+  document.getElementById("comboFlow").innerHTML =
+    hist.map((c,i)=>`<span class="combo-chip ${i===6?"hot":(i<5?"old":"")}">${c}</span>`).join('<span class="arrow">→</span>');
+  document.getElementById("sizeStats").innerHTML =
+    `<div class="bs"><b>20%</b><span>单答案（2020 出现过）</span></div>
+     <div class="bs"><b>30%</b><span>二选组合</span></div>
+     <div class="bs"><b>50%</b><span>三选组合（近四年主流）</span></div>`;
+  const lc = {A:"#2563eb", B:"#7c3aed", C:"#059669", D:"#d97706"};
+  document.getElementById("singleLetters").innerHTML =
+    Object.entries(A.single_letters).map(([L,x])=>
+      `<div class="bar-row"><span class="bar-label">${L}</span>
+       <span class="bar-track"><span class="bar-fill" data-w="${(x.n/6*100).toFixed(0)}" style="background:${lc[L]};width:${(x.n/6*100).toFixed(0)}%"></span></span>
+       <span class="bar-val">${x.n} 次 · ${(x.n/14*100).toFixed(0)}%</span></div>`).join("");
+})();
+
+/* ================= 渲染：模拟押题 ================= */
+function mockWhy(m){
+  const dist = ENGINE.scenario_era[m.pslot];
+  const rank = Object.keys(CATS).map(c=>({c, p:dist[c]})).sort((a,b)=>b.p-a.p).findIndex(x=>x.c===m.cats[0]) + 1;
+  const slotName = m.pslot === "multi" ? "多选" : "单选";
+  return `命制依据：情景模型显示「${m.cats[0]}」为 2027 ${slotName}压轴第 ${rank} 大概率考点（≈${(dist[m.cats[0]]*100).toFixed(0)}%）`;
+}
+const mockBox = document.getElementById('mockList');
+MOCKS.forEach(m=>{
+  const card = document.createElement('article');
+  card.className = 'qcard reveal';
+  const tags = m.cats.map(c=>`<span class="q-tag" style="color:${CATS[c].color};background:${CATS[c].color}14;border:1px solid ${CATS[c].color}44">预测考点：${c}</span>`).join('');
+  const opts = m.options.map((o,i)=>`<button class="quiz-opt" data-i="${i}"><b>${"ABCD"[i]}</b>${o}</button>`).join('');
+  card.innerHTML = `
+    <div class="mock-head">
+      <span class="mock-badge">${m.type}</span>
+      ${tags}
+    </div>
+    <div class="q-note">${mockWhy(m)}；${m.echo}</div>
+    <p class="q-stem" style="margin-top:12px">${m.stem}</p>
+    <div class="quiz-opts ${optClass(m.options)}">${opts}</div>
+    <p class="quiz-fb" aria-live="polite"></p>
+    <div class="q-actions"><button class="q-reveal q-show">直接查看解析</button></div>
+    <div class="q-answer"><div><div class="ans-inner">
+      <span class="ans-badge">参考答案　${m.answer}</span>
+      <p class="ans-analysis">${m.analysis}</p>
+    </div></div></div>`;
+  const solved = new Set();
+  card.querySelectorAll('.quiz-opt').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      if(solved.has('done')) return;
+      const i = +btn.dataset.i, ok = "ABCD"[i] === m.answer[0] || (m.answer.length>1 && m.answer.includes("ABCD"[i]));
+      if(ok){
+        btn.classList.add('correct');
+        card.querySelectorAll('.quiz-opt').forEach(b=>b.disabled=true);
+        solved.add('done');
+        const fb = card.querySelector('.quiz-fb');
+        fb.textContent = m.answer.length>1 ? '✓ 答对了！完整解析在下方。' : '✓ 答对了！点击下方可查看完整解析。';
+        fb.className = 'quiz-fb ok';
+        card.classList.add('open');
+        card.querySelector('.q-show').textContent = '收起解析';
+      }else{
+        btn.classList.add('wrong','dim'); btn.disabled = true;
+        const fb = card.querySelector('.quiz-fb');
+        fb.textContent = '✗ 再想想——排除一个错误选项后，离答案更近了。';
+        fb.className = 'quiz-fb no';
+      }
+    });
+  });
+  card.querySelector('.q-show').addEventListener('click', e=>{
+    card.classList.toggle('open');
+    e.target.textContent = card.classList.contains('open') ? '收起解析' : '直接查看解析';
+  });
+  mockBox.appendChild(card);
+});
+
+/* ================= 滚动进场 & 进度条动画 ================= */
+const revealables = [...document.querySelectorAll('.reveal, .panel, .pred-panel, .verdict')];
+function revealCheck(){
+  const vh = innerHeight;
+  revealables.forEach(el=>{
+    if(el.classList.contains('inview')) return;
+    const r = el.getBoundingClientRect();
+    if(r.top < vh*0.92 && r.bottom > 0){
+      el.classList.add('inview');
+      el.querySelectorAll('.bar-fill, .pct-fill').forEach(f=>{ f.style.width = f.dataset.w + '%'; });
+    }
+  });
+}
+let rTick = false;
+addEventListener('scroll', ()=>{ if(!rTick){ rTick = true; requestAnimationFrame(()=>{ revealCheck(); rTick = false; }); } }, {passive:true});
+addEventListener('resize', revealCheck);
+addEventListener('load', revealCheck);
+revealCheck();
+
+/* 导航状态 */
+const nav = document.getElementById('nav');
+addEventListener('scroll', ()=>nav.classList.toggle('scrolled', scrollY>8), {passive:true});
+const links = [...document.querySelectorAll('#navLinks a')];
+const secIO = new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      links.forEach(a=>a.classList.toggle('on', a.getAttribute('href')==='#'+e.target.id));
+    }
+  });
+},{rootMargin:'-30% 0px -60% 0px'});
+document.querySelectorAll('main section').forEach(s=>secIO.observe(s));
+</script>
+</body>
+</html>
